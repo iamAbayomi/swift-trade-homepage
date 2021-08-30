@@ -16,13 +16,13 @@ import {
       return(
         <div className="the-rate-section">
             <div className="header-section display-flex-withspace">
-                <div className="our-rates">
+                <div className="our-section-text our-rates">
                     <p>Our Rates</p>
                 </div>
-                <div className="our-reserves">
+                <div className="our-section-text our-reserves">
                     <p>Our Reserves</p>
                 </div>
-                <div className="latest-exchanges">
+                <div className="our-section-text latest-exchanges">
                     <p>Latest Exchanges</p>
                 </div>
             </div>
