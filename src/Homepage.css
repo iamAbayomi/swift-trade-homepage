@@ -6,6 +6,7 @@
     color: #010066;
     font-weight: 600;
     font-size: 22px;
+    margin: 40px auto 20px auto;
 }
 
 
@@ -32,5 +33,5 @@
 
 .iphone-store-container{
     max-width: 600px;
-    margin: 90px auto 20px auto;
+    margin: 90px auto 100px auto;
 }
