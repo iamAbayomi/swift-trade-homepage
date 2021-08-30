@@ -36,9 +36,9 @@ import {
                             <img className="btc-logo" src="./vectors/bitcoin.svg" />
                             <p className="btc-text">BTC</p>
                         </div>
-                        <div className="">
-                            <p>We Buy @ N350/$</p>
-                            <p>We Buy @ n370/$</p>
+                        <div className="btc-text-price">
+                            <p>We Buy @ <span className="bold-currency">N350/$ </span></p>
+                            <p>We Buy @ <span className="bold-currency">N350/$ </span></p>
                         </div>
                     </div>
                     <div className="display-flex-withspace"> 
