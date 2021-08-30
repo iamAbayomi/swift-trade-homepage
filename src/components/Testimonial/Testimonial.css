@@ -1,0 +1,14 @@
+.testimonial-background{
+    /* background-image: url("./vectors/cutbackground.png"); */
+    background: #010066;
+    height: 400px;
+}
+
+.typography{
+
+}
+
+
+.testimonial-background p{
+    color: white;
+}

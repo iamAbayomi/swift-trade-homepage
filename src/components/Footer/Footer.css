@@ -1,0 +1,30 @@
+.footer-section{
+    background-color: #151515;
+    padding: 60px 60px 60px 60px;
+}
+
+.footer-header{
+    font-size: 18px;
+    color: white;
+}
+
+.footer-section p{
+    
+}
+
+.social-media-handles{
+    margin: 20px 0px 0px 0px;
+}
+
+
+.company-info-text{
+    max-width: 380px;
+}
+
+
+.footer-highlight{
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    color: #A2A2A2;
+}

@@ -28,7 +28,7 @@ export default class Homepage extends React.Component{
                             <BlueVector src="./vectors/blue-vector.svg" />
                         </div>
                         <BuySellCardView className="card-view" >
-                            <p className="buysell-header subtitle-text text-align-center" >Buy and Sell from anywhere</p>
+                            <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
                             <BuySellOptions className="display-flex-withspace" >
                                 <BuySellWidth className="">
                                     <div className="buysell-content">
@@ -53,15 +53,15 @@ export default class Homepage extends React.Component{
                     <Testimonial />
                     
                     <div className="download-app-section text-align-center">
-                        <p>Download our app</p>
-                        <p>Discover exclusive deals and discounts with our mobile experience</p>
-                        <div className="display-flex">
-                            <img src="" />
-                            <img src="" />
+                        <p className="buysell-header" > Download our app</p>
+                        <p className="buysell-text" >Discover exclusive deals and discounts with our mobile experience</p>
+                        <div className="play-storeapp  display-flex">
+                            <img src="./vectors/app-store-logo.png" />
+                            <img src="./vectors/google-play.png" />
                         </div>
-                        <div className="display-flex">
-                            <img />
-                            <img />
+                        <div className="iphone-store-container  display-flex">
+                            <img src="./vectors/iphonex1.png" />
+                            <img src="./vectors/iphonex2.png" />
                         </div>
                     </div>
 

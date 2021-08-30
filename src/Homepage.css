@@ -1,0 +1,36 @@
+.bullsell-header{
+
+}
+
+.buysell-header{
+    color: #010066;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+.buysell-content{
+    width: 70px;
+    margin: 50px auto 0px auto;
+}
+
+.buysell-button{
+    width: 200px;
+    margin: 50px auto 0px auto;
+}
+
+
+.buysell-text{
+    width: 450px;
+    margin: auto;
+}
+
+.play-storeapp{
+    max-width: 200px;
+    margin: 30px auto 60px auto;
+}
+
+.iphone-store-container{
+    max-width: 600px;
+    margin: 90px auto 20px auto;
+}
