@@ -25,7 +25,11 @@
 }
 
 .btc-text{
-    margin: 20px 50px 0px 20px;
+    margin: 20px 50px 0px 5px;
+}
+
+.eth-text{
+    margin: 30px 50px 0px 10px;
 }
 
 .btc-text-price{
@@ -34,4 +38,17 @@
 
 .bold-currency{
     font-weight: 700;
+}
+
+
+.blue-button{
+    border-radius: 10px;
+}
+
+.btc-resrv-text{
+    margin: 0px 50px 0px 5px;
+}
+
+.eth-resrv-text{
+    margin: 10px 50px 0px 5px;   
 }
