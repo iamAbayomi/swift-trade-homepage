@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 
 import './BuySellSection.css'
@@ -26,15 +27,30 @@ import {
                     <p>Latest Exchanges</p>
                 </div>
             </div>
+            <div className="divider" />
             <div className="body-section display-flex-withspace">
                 <div className="our-rate-body-section">
-                        <div className="">
-                            <p>We Buy @ N350/s</p>
-                            <p>We Buy @ n370/s</p>
+
+                        <div className="display-flex-withspace">
+                            <div className="display-flex-withspace">
+                                <img src="./vectors/bitcoin.svg" />
+                                <p>BTC</p>
+                            </div>
+                            <div>
+                                    <p>We Buy @ N350/s</p>
+                                    <p>We Buy @ n370/s</p>
+                            </div>
                         </div>
-                        <div className=""> 
-                            <p>We Bu @ N345/s</p>
-                            <p>We Bu @ N370/s</p>
+
+                        <div className="display-flex-withspace"> 
+                            <div className="display-flex-withspace">
+                                <img src="./vectors/etherum.svg" />
+                                <p>ETH</p>
+                            </div>
+                            <div>
+                                    <p>We Buy @ N350/s</p>
+                                    <p>We Buy @ n370/s</p>
+                            </div>
                         </div>
                 </div>
                 <div className="our-reserves-section">
