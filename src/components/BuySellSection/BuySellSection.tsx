@@ -29,30 +29,30 @@ import {
             </div>
             <div className="divider" />
             <div className="body-section display-flex-withspace">
+                {/* The rate section contents */}
                 <div className="our-rate-body-section">
-
+                    <div className="display-flex-withspace">
                         <div className="display-flex-withspace">
-                            <div className="display-flex-withspace">
-                                <img src="./vectors/bitcoin.svg" />
-                                <p>BTC</p>
-                            </div>
-                            <div>
-                                    <p>We Buy @ N350/s</p>
-                                    <p>We Buy @ n370/s</p>
-                            </div>
+                            <img className="btc-logo" src="./vectors/bitcoin.svg" />
+                            <p className="btc-text">BTC</p>
                         </div>
-
-                        <div className="display-flex-withspace"> 
-                            <div className="display-flex-withspace">
-                                <img src="./vectors/etherum.svg" />
-                                <p>ETH</p>
-                            </div>
-                            <div>
-                                    <p>We Buy @ N350/s</p>
-                                    <p>We Buy @ n370/s</p>
-                            </div>
+                        <div className="">
+                            <p>We Buy @ N350/$</p>
+                            <p>We Buy @ n370/$</p>
                         </div>
+                    </div>
+                    <div className="display-flex-withspace"> 
+                        <div className="display-flex-withspace">
+                            <img src="./vectors/etherum.svg" />
+                            <p>ETH</p>
+                        </div>
+                        <div>
+                            <p>We Buy @ N350/$</p>
+                            <p>We Buy @ n370/$</p>
+                        </div>
+                    </div>
                 </div>
+                {/* The reserves section */}
                 <div className="our-reserves-section">
                         <div className="">
                             <div className="display-flex-withspace">
@@ -60,12 +60,12 @@ import {
                                 <p>Bank Transfer</p>
                                 <p>NGN</p>
                             </div>
-                            <p>#3452030300303.24/s</p>
+                            <p>#3452030300303.24/$</p>
                         </div>
                         
                         <div className="display-flex-withspace"> 
                             <div className="display-flex">
-                                    <img src="./vectors/bitcoin.svg" />
+                                    <img className="btc-logo" src="./vectors/bitcoin.svg" />
                                     <p>Bitcoin</p>
                             </div>
                             <div className="display-flex">
@@ -85,7 +85,7 @@ import {
                             </div>
                         </div>
                 </div>
-
+                {/* The exchanges section.  */}
                 <div className="latest-exchanges-section">
                     <button className="blue-button">8 hours ago</button>
                         <div className="">
