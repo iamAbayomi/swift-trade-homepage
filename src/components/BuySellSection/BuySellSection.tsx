@@ -38,7 +38,7 @@ import {
                         </div>
                         <div className="btc-text-price">
                             <p>We Buy @ <span className="bold-currency">N350/$ </span></p>
-                            <p>We Buy @ <span className="bold-currency">N350/$ </span></p>
+                            <p>We Buy @ <span className="bold-currency">N370/$ </span></p>
                         </div>
                     </div>
                     <div className="display-flex-withspace"> 
@@ -47,8 +47,8 @@ import {
                             <p>ETH</p>
                         </div>
                         <div>
-                            <p>We Buy @ N350/$</p>
-                            <p>We Buy @ n370/$</p>
+                        <p>We Buy @ <span className="bold-currency">N345/$ </span></p>
+                        <p>We Buy @ <span className="bold-currency">N350/$ </span></p>
                         </div>
                     </div>
                 </div>
