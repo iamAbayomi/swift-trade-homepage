@@ -55,34 +55,62 @@ import {
                 </div>
                 <div className="our-reserves-section">
                         <div className="">
-                            <p>NGN</p>
+                            <div className="display-flex-withspace">
+                                <img src="./vectors/bank-building.svg" />
+                                <p>Bank Transfer</p>
+                                <p>NGN</p>
+                            </div>
                             <p>#3452030300303.24/s</p>
                         </div>
-                        <div className=""> 
-                            <p>399.98</p>
-                            <p>BTC</p>
+                        
+                        <div className="display-flex-withspace"> 
+                            <div className="display-flex">
+                                    <img src="./vectors/bitcoin.svg" />
+                                    <p>Bitcoin</p>
+                            </div>
+                            <div className="display-flex">
+                                <p>399.98</p>
+                                <p>BTC</p>
+                            </div>
                         </div>
-                        <div className=""> 
-                            <p>1000.00</p>
-                            <p>ETH</p>
+
+                        <div className="display-flex-withspace"> 
+                            <div className="display-flex-withspace">
+                                <img src="./vectors/etherum.svg" />
+                                <p>ETH</p>
+                            </div>
+                            <div className="display-flex">
+                                <p>1000.00</p>
+                                <p>ETH</p>
+                            </div>
                         </div>
                 </div>
 
                 <div className="latest-exchanges-section">
-                    <button>8 hours ago</button>
+                    <button className="blue-button">8 hours ago</button>
                         <div className="">
-                            <p>Bitcoin BTC</p>
-                            <p>Bank</p>
+                            <div className="display-flex">
+                                <p>Bitcoin BTC</p>
+                                <img src="./vectors/transfer.svg" />
+                                <p>Bank</p>
+                            </div>
                             <p>Transfer NGN</p>
                         </div>
                     
-                    <div className="">
+                    <div className="display-flex">
                             <p>1.16 BTC </p>
+                            <img src="./vectors/double-transfer.svg" />
+                            <p>696152299929.23 NGN</p>
                     </div>
+
+                    <div className="divider" />
                     
                     <div className="">
+                        <div className="display-flex">
                             <p>Amazon Card</p>
+                            <img src="./vectors/transfer.svg" />
                             <p>Bank</p>
+                        </div>
                             <p>Transfer NGN</p>
                     </div>
                 </div>
