@@ -5,6 +5,7 @@ import BuySellSection from './components/BuySellSection/BuySellSection'
 import Footer from './components/Footer/Footer'
 import GreatExperience from './components/GreatExperience/GreatExperience'
 import Oursection from './components/Oursection'
+import Testimonial from './components/Testimonial/Testimonial'
 import TopNav from './components/TopNav/TopNav'
 
 import Valuepropositon from './components/ValueProposition/Valuepropositon'
@@ -49,19 +50,9 @@ export default class Homepage extends React.Component{
                     </div>
 
                     
-
-
-                    <div className="over-view-section">
-                        <div className="typography">
-                            <p> 10,0000 satisfied clients around the world </p>
-                            <p> Yeah we are proud with numbers. We have helped thousands of clients all around the world 
-                                with our bespoke services. Hover on top of them pic to view their testimonials.
-                            </p>
-                        </div>
-                        <img src="our-view-section" />
-                    </div>
+                    <Testimonial />
                     
-                    <div className="download-app-section">
+                    <div className="download-app-section text-align-center">
                         <p>Download our app</p>
                         <p>Discover exclusive deals and discounts with our mobile experience</p>
                         <div className="display-flex">
