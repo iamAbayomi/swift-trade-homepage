@@ -2,6 +2,12 @@
 
 }
 
+.buysell-vector{
+    margin: 20px auto 0px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
 .buysell-header{
     color: #010066;
     font-weight: 600;
