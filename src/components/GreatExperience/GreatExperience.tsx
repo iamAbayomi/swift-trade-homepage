@@ -11,6 +11,8 @@ function GreatExperience(){
                     <p className="medium-text" >
                         Greate Experience with Swift
                     </p>
+                    <div className="orange-bar"/>
+                        
                     <p className="body" >
                         Swift Trade is an online site and a p2admin platform that allows users to buy, sell and/ or
                         exchange digital and fiat assets safely. 
@@ -34,8 +36,8 @@ export default GreatExperience;
 
 
 const FirstSection = styled.div `
-    max-width: 400px;
-    margin: 90px 0px 0px 0px;
+    
+
 `
 
 const Image = styled.img`
