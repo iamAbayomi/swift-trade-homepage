@@ -2,6 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BuySellSection from './components/BuySellSection/BuySellSection'
+import BuySellSectionTwo from './components/BuySellSectionTwo/BuySellSectionTwo'
 import Footer from './components/Footer/Footer'
 import GreatExperience from './components/GreatExperience/GreatExperience'
 import Oursection from './components/Oursection'
@@ -24,33 +25,8 @@ export default class Homepage extends React.Component{
                     
                     <GreatExperience />
 
-                    <div className="buy-sell-section">
-                        <div className="overflow-hidden buysell-vector">
-                            <BlueVector src="./vectors/blue-vector.svg" />
-                        </div>
-                        <div className="buysell-cardview-section">
-                            <BuySellCardView className="card-view buysell-cardview" >
-                                <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
-                                <BuySellOptions className="display-flex-withspace buysell-options" >
-                                    <BuySellWidth className="buysell-width">
-                                        <div className="buysell-content">
-                                            <img className="buysell-image" src="./vectors/bitcoin.svg" />
-                                            <p> Bitcoin </p>
-                                        </div>
-                                    </BuySellWidth>
-                                    <BuySellWidth className="buysell-width">
-                                        <div className="buysell-content">
-                                            <img className="buysell-image" src="./vectors/giftcards.svg" />
-                                            <p> Gift Cards </p>
-                                        </div>
-                                    </BuySellWidth>
-                                </BuySellOptions>
-                            </BuySellCardView>
-                        </div>
-                        <div className="buysell-button">
-                            <Button className="blue-button" >GET STARTED</Button>
-                        </div>
-                    </div>
+                    <BuySellSectionTwo />
+                    
 {/* 
                     
                     <Testimonial />
