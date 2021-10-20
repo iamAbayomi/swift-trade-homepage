@@ -23,7 +23,7 @@ export default class Homepage extends React.Component{
                     <BuySellSection />
                     
                     <GreatExperience />
-{/* 
+
                     <div className="buy-sell-section">
                         <div className="overflow-hidden">
                             <BlueVector src="./vectors/blue-vector.svg" />
@@ -49,7 +49,7 @@ export default class Homepage extends React.Component{
                             <Button className="blue-button" >GET STARTED</Button>
                         </div>
                     </div>
-
+{/* 
                     
                     <Testimonial />
                     
