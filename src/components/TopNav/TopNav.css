@@ -18,3 +18,47 @@
 .top-nav-action-section{
 
 }
+
+
+
+/* Small Breakpoint */
+@media screen and (max-width: 576px){
+    .search-bar, .username, .notifications-icon{
+        display: none;
+    }
+
+    .header-tool{
+        display: block;
+        padding: 0px;
+    }
+    .profile-section{
+        float: right;
+        margin: 10px 30px 0px 30px;
+    }
+    .main-section{
+        max-width: 500px;
+    }
+}
+
+
+/* For Tablets */
+@media screen and (max-width: 768px){
+    
+}
+/* For Laptops */
+@media screen and (max-width: 900px){
+    .top-nav-menu{
+        display: none;
+    }   
+
+    .login-button{
+        display: none;
+    }
+}
+/* For Large Devices */
+@media screen and (max-width: 1200px){
+    
+    
+}
+
+

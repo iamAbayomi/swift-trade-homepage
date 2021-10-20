@@ -20,7 +20,7 @@ function TopNav(){
                 }                
             </div>
             <div className="top-nav-action-section display-flex-withspace">
-                <LoginText className="text-button">
+                <LoginText className="text-button login-button">
                     Login
                 </LoginText>
                 <button className="blue-button">

@@ -29,5 +29,5 @@ export default Valuepropositon
 
 
 const Button = styled.button `
-    margin: 40px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
 `
