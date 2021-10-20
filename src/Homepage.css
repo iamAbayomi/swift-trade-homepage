@@ -2,6 +2,12 @@
 
 }
 
+.buysell-cardview{
+    max-width: 900px;
+    margin: -30px auto 20px;
+    padding: 20px ;
+}
+
 .buysell-vector{
     margin: 20px auto 0px auto;
     max-width: 1200px;
@@ -15,21 +21,37 @@
     margin: 40px auto 20px auto;
 }
 
+.buysell-options{
+    max-width: 610px;
+    margin: 20px auto 30px auto;
+}
+
+.buysell-width{
+    max-width: 260px;
+    width: 100%;
+    margin: 20px 10px 80px 10px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
 
 .buysell-content{
-    width: 70px;
+    max-width: 70px;
     margin: 50px auto 0px auto;
 }
 
 .buysell-button{
-    width: 200px;
+    max-width: 131px;
     margin: 50px auto 0px auto;
 }
 
 
 .buysell-text{
-    width: 450px;
+    max-width: 450px;
     margin: auto;
+}
+
+.buysell-cardview-section{
+    margin: 10px 40px;
 }
 
 .play-storeapp{
@@ -45,4 +67,16 @@
 .dashboard-contents{
     max-width: 1400px;
     margin: auto;
+}
+
+.buysell-image{
+    max-width: 60px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 576px ) {
+    .buysell-content{
+        max-width: 40px;
+    }
 }
