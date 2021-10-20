@@ -36,7 +36,7 @@
         margin: 10px 30px 0px 30px;
     }
     .main-section{
-        max-width: 500px;
+        /* max-width: 500px; */
     }
 }
 
@@ -50,8 +50,8 @@
     .top-nav-menu{
         display: none;
     }   
-
-    .login-button{
+    
+    .top-nav-action-section{
         display: none;
     }
 }
