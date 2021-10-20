@@ -25,7 +25,7 @@ export default class Homepage extends React.Component{
                     <GreatExperience />
 
                     <div className="buy-sell-section">
-                        <div className="overflow-hidden">
+                        <div className="overflow-hidden buysell-vector">
                             <BlueVector src="./vectors/blue-vector.svg" />
                         </div>
                         <BuySellCardView className="card-view" >
@@ -78,8 +78,9 @@ export default class Homepage extends React.Component{
 
 
 const BlueVector = styled.img `
-    margin 20px 0px 0px 0px;
-    height: 485px;
+    margin: 20px auto 0px auto;
+    max-width: 1200px;
+    width: 100%;
 `
 
 
