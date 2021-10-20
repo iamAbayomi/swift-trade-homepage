@@ -35,3 +35,8 @@
     max-width: 600px;
     margin: 90px auto 100px auto;
 }
+
+.dashboard-contents{
+    max-width: 1400px;
+    margin: auto;
+}

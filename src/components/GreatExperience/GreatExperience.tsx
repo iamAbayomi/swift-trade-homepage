@@ -21,7 +21,7 @@ function GreatExperience(){
                     </button>
                 </FirstSection>
                 <div className="second-section">
-                    <Image src="./vectors/application-display.svg" />
+                    <Image className="great-experience-image" src="./vectors/application-display.svg" />
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ export default GreatExperience;
 
 
 const FirstSection = styled.div `
-    max-width: 600px;
+    max-width: 400px;
     margin: 90px 0px 0px 0px;
 `
 

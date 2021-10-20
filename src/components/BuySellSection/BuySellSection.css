@@ -57,3 +57,10 @@
 .our-reserves-section{
     margin: 30px 10px 0px 30px;
 }
+
+
+@media screen and (max-width: 1263px){
+    .the-rate-section{
+        display: none;
+    }   
+}

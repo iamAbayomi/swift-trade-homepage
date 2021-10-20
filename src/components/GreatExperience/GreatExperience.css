@@ -6,3 +6,34 @@
 .first-section p{
     line-height: 40px;
 }
+
+.great-experience-image{
+    max-width: 600px;
+    width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .great-experience-section{
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        margin: auto;
+    }
+    .first-section{
+        max-width: 800px;
+        margin: -30px auto 60px;
+        padding: 20px 40px;
+        text-align: center;
+    }
+    .great-experience-image{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .first-section{
+        max-width: 400px;
+
+    }
+}
