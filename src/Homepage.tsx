@@ -28,23 +28,25 @@ export default class Homepage extends React.Component{
                         <div className="overflow-hidden buysell-vector">
                             <BlueVector src="./vectors/blue-vector.svg" />
                         </div>
-                        <BuySellCardView className="card-view" >
-                            <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
-                            <BuySellOptions className="display-flex-withspace" >
-                                <BuySellWidth className="">
-                                    <div className="buysell-content">
-                                        <img src="./vectors/bitcoin.svg" />
-                                        <p> Bitcoin </p>
-                                    </div>
-                                </BuySellWidth>
-                                <BuySellWidth className="">
-                                    <div className="buysell-content">
-                                        <img src="./vectors/giftcards.svg" />
-                                        <p> Gift Cards </p>
-                                    </div>
-                                </BuySellWidth>
-                            </BuySellOptions>
-                        </BuySellCardView>
+                        <div className="buysell-cardview-section">
+                            <BuySellCardView className="card-view buysell-cardview" >
+                                <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
+                                <BuySellOptions className="display-flex-withspace buysell-options" >
+                                    <BuySellWidth className="buysell-width">
+                                        <div className="buysell-content">
+                                            <img className="buysell-image" src="./vectors/bitcoin.svg" />
+                                            <p> Bitcoin </p>
+                                        </div>
+                                    </BuySellWidth>
+                                    <BuySellWidth className="buysell-width">
+                                        <div className="buysell-content">
+                                            <img className="buysell-image" src="./vectors/giftcards.svg" />
+                                            <p> Gift Cards </p>
+                                        </div>
+                                    </BuySellWidth>
+                                </BuySellOptions>
+                            </BuySellCardView>
+                        </div>
                         <div className="buysell-button">
                             <Button className="blue-button" >GET STARTED</Button>
                         </div>
@@ -85,23 +87,22 @@ const BlueVector = styled.img `
 
 
 const BuySellCardView = styled.div `
-   width: 900px;
-   margin 0px auto 30px auto;
+   
 `
 
 
 const BuySellOptions = styled.div `
-    width: 610px;
-    margin 20px auto 30px auto;
+    // width: 610px;
+    // margin 20px auto 30px auto;
 `
 
 
 const BuySellWidth = styled.div `
-    width: 260px;
-    height: 222px;
-    margin: 20px 0px 80px 0px;
-    border: 1px solid black;
-    border-radius: 16px
+    // width: 260px;
+    // height: 222px;
+    // margin: 20px 0px 80px 0px;
+    // border: 1px solid black;
+    // border-radius: 16px
 `
 
 const Button = styled.button `
