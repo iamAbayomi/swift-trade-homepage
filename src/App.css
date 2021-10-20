@@ -1,3 +1,7 @@
+:root{
+    font-size: 1em;
+}
+
 .display-flex{
     display: flex;
 }
@@ -12,7 +16,7 @@
 }
 
 .header-text{
-    font-size: 48px;
+    font-size: 3em;
     font-weight: 700;
     margin: 0px 0px 0px 0px;
 }
@@ -22,15 +26,15 @@
 }
 
 .medium-text{
-    font-size: 32px;
+    font-size: 2em;
 }
 
 .subtitle-text{
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .body-text{
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .text-align-center{
@@ -60,3 +64,44 @@
 .btc-logo{
     width: 24px;
 }
+
+
+/* Small Breakpoint */
+@media screen and (max-width: 576px){
+    :root{
+        font-size: 0.75em;
+    }
+}
+
+
+/* For Tablets */
+@media screen and (max-width: 768px){
+    :root{
+        font-size: 0.875em;
+    }   
+    .header-text{
+        font-size: 2em;
+    }
+    .medium-text{
+        font-size: 1.75em;
+    }
+    .subtitle-text{
+        font-size: 1em;
+    }
+    .body-text{
+        font-size: 0.875em;
+    }
+}
+/* For Laptops */
+@media screen and (max-width: 900px){    
+    
+}
+/* For Large Devices */
+@media screen and (max-width: 1200px){
+    :root{
+        font-size: 1em;
+    }
+
+}
+
+
