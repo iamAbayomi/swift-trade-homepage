@@ -4,8 +4,8 @@ import './Testimonial.css'
 
 function testimonial(){
     return(
-        // <div className="testimonial-background" style ={ { backgroundImage: "url('./vectors/cutbackground.png')" } }>
-        <div className="testimonial-background" >
+        <div className="testimonial-background" style ={ { backgroundImage: "url('./vectors/testimonial-icon.jpg')" } }>
+          {/* <div className="testimonial-background" > */}
             {/* <img src="/vectors/testimonial.svg" /> */}
             <div className="typography text-align-center">
                 {/* <img src="./vectors/cut-background.png"></img> */}
