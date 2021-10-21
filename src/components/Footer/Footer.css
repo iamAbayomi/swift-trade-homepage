@@ -10,6 +10,13 @@
     color: white;
 }
 
+.instagram-section{
+    display: grid;    
+    row-gap: 10px;
+    column-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .footer-section p{
     
 }
@@ -17,6 +24,8 @@
 
 .footer-links{
     margin: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .company-us{
@@ -41,8 +50,13 @@
 }
 
 
+
 @media screen and (max-width: 960px)  {
     .footer-section{
         flex-direction: column;
+    }
+
+    .footer-links{
+        margin: 20px 0px;
     }
 }
