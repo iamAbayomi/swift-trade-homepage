@@ -6,6 +6,9 @@ const companyLinks = ['Home', 'About Us', 'Blog', 'Sell', 'Contact Us']
 
 const contactUs = ['(+234) 137632128', 'Company@yahoo.com', 'Address goes here', 'Download Our App']
 
+const imagesBackground = ['grey-background', 'grey-add-background', 'grey-background', 'grey-background', 
+                            'grey-background','grey-background','grey-background', 'grey-background' ]
+
 function Footer(){
     return(
         <div className="footer-section">
@@ -22,7 +25,7 @@ function Footer(){
                 </div>
             </div>
 
-            <div className="footer-links display-flex-withspace">
+            <div className="footer-links">
                 <div className="company-links">
                     <p className="footer-header"> Company Links</p>
                     {companyLinks.map((item) =>
@@ -42,7 +45,12 @@ function Footer(){
                 <div className="company-instagram">
                     <p className="footer-header">Company Instagram </p>
                     <div className="instagram-section">
-                        <img src="./vectors/companyig.svg"/>
+                        {
+                            imagesBackground.map((item) => 
+                                <img src={`./vectors/${item}.svg`}/>
+                            )
+                        }
+                        
                     </div>
                 </div>
             </div>
