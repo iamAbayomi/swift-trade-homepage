@@ -35,13 +35,13 @@ export default class Homepage extends React.Component{
                             <img src="./vectors/app-store-logo.png" />
                             <img src="./vectors/google-play.png" />
                         </div>
-                        <div className="iphone-store-container  display-flex">
-                            <img src="./vectors/iphonex1.png" />
-                            <img src="./vectors/iphonex2.png" />
+                        <div className="iphone-store-container display-flex">
+                            <img className="image-store-img" src="./vectors/iphonex1.png" />
+                            <img className="image-store-img" src="./vectors/iphonex2.png" />
                         </div>
                     </div>
 
-                 <Footer/>
+                 {/* <Footer/> */}
                     </div>
                 </div>
             </div>

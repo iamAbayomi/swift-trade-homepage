@@ -61,8 +61,19 @@
 
 .iphone-store-container{
     max-width: 600px;
+    width: 100%;
     margin: 90px auto 100px auto;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
 }
+
+
+.image-store-img{
+    max-width: 300px;
+    min-width: 50px;
+    width: 100%;
+}
+
 
 .dashboard-contents{
     max-width: 1400px;
