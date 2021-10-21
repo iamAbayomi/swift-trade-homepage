@@ -21,6 +21,25 @@
     
 }
 
+.footer-section{
+
+}
+
+
+
+.footer-copyright{    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    /* identical to box height, or 200% */
+    color: #989898;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    /* position: fixed;
+    bottom: 5px; */
+}
+
 
 .footer-links{
     margin: 0px 10px 0px 10px;
@@ -36,6 +55,11 @@
     margin: 20px 0px 0px 0px;
 }
 
+.company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .company-info-text{
     max-width: 380px;
@@ -58,5 +82,9 @@
 
     .footer-links{
         margin: 20px 0px;
+    }
+
+    .company-instagram{
+        max-width: 600px;
     }
 }

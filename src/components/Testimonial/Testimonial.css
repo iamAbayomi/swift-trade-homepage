@@ -1,6 +1,6 @@
 .testimonial-background{
-    /* background-image: url("./vectors/cutbackground.png"); */
-    background: #010066;
+    /* background-image: url("./vectors/testimonial.svg"); */
+    /* background: #010066; */
     height: 400px;
 }
 
@@ -11,4 +11,16 @@
 
 .testimonial-background p{
     color: white;
+}
+
+.testimonial-icon-div{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.testimonial-icon{
+    max-width: 800px;
+    width: 100%;
+    /* margin: 10px 20px; */
 }

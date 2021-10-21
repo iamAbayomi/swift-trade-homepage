@@ -13,16 +13,19 @@ function Footer(){
     return(
         <div className="footer-section">
             <div className="company-info">
-                <div className="swft-logo" >
-                    <img src="./vectors/swift-logo.svg" />
+                <div>
+                    <div className="swft-logo" >
+                        <img src="./vectors/swift-logo.svg" />
+                    </div>
+                    <p className="company-info-text footer-highlight">
+                    Fusce ut elit aliquet, fermentum leo vel, tempus nunc. 
+                    Fusce eu rhoncus augue. Fusce vel metus pharetra, fermentum
+                    </p>
+                    <div className="social-media-handles">
+                        <img src="./vectors/social-media-handles.svg" />
+                    </div>
                 </div>
-                <p className="company-info-text footer-highlight">
-                Fusce ut elit aliquet, fermentum leo vel, tempus nunc. 
-                Fusce eu rhoncus augue. Fusce vel metus pharetra, fermentum
-                </p>
-                <div className="social-media-handles">
-                    <img src="./vectors/social-media-handles.svg" />
-                </div>
+                <p className="footer-copyright">@ 2022 Swift Trade NG</p>
             </div>
 
             <div className="footer-links">
