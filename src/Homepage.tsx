@@ -25,11 +25,8 @@ export default class Homepage extends React.Component{
                     
                     <GreatExperience />
 
-                    <BuySellSectionTwo />
-                    
-{/* 
-                    
-                    <Testimonial />
+                    <BuySellSectionTwo />                    
+                    {/* <Testimonial /> */}
                     
                     <div className="download-app-section text-align-center">
                         <p className="buysell-header" > Download our app</p>
@@ -44,7 +41,7 @@ export default class Homepage extends React.Component{
                         </div>
                     </div>
 
-                 <Footer/> */}
+                 <Footer/>
                     </div>
                 </div>
             </div>
