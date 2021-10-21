@@ -8,7 +8,7 @@ const contactUs = ['(+234) 137632128', 'Company@yahoo.com', 'Address goes here',
 
 function Footer(){
     return(
-        <div className="footer-section display-flex-withspace">
+        <div className="footer-section">
             <div className="company-info">
                 <div className="swft-logo" >
                     <img src="./vectors/swift-logo.svg" />
@@ -22,6 +22,7 @@ function Footer(){
                 </div>
             </div>
 
+            <div className="footer-links display-flex-withspace">
                 <div className="company-links">
                     <p className="footer-header"> Company Links</p>
                     {companyLinks.map((item) =>
@@ -36,6 +37,7 @@ function Footer(){
                      <p className="footer-highlight" >{item}</p>
                     )}
                 </div>
+            </div>
 
                 <div className="company-instagram">
                     <p className="footer-header">Company Instagram </p>
