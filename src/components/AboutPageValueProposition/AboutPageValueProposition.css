@@ -42,6 +42,8 @@
 
 .about-value-prop-subtitle{
     color: white;
+    max-width: 550px;
+    margin: auto;
 }
 
 .about-value-prop-image{
