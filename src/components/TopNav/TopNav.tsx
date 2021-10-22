@@ -3,7 +3,7 @@ import React from 'react'
 import './TopNav.css';
 import styled from 'styled-components'
 
-const menuItems =  ['Home', 'About Us', 'Contact Us', 'Sell Bitcoin/GiftCard']
+const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}, { link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
 
 function TopNav(){
     return(
@@ -13,9 +13,9 @@ function TopNav(){
             </div>
             <div className="top-nav-menu display-flex-withspace">
                 {menuItems.map((menu) =>
-                    <p className="top-nav-menu-text">
-                        {menu}
-                    </p>
+                    <a href={menu.link} className="top-nav-menu-text text-link">
+                        {menu.name}
+                    </a>
                     )
                 }                
             </div>
