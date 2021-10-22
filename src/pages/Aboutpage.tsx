@@ -9,6 +9,7 @@ import './AboutPage.css'
 
 import TopNav from "../components/TopNav/TopNav";
 import Footer from "../components/Footer/Footer";
+import OurHistory from "../components/OurHistory/OurHistory";
 function Aboutpage(){
     return(
         <div>
@@ -17,6 +18,7 @@ function Aboutpage(){
                 <AboutPageValueProposition />
                <div className="page-body">
                     <CEOTestimonial />
+                    <OurHistory />
                     <AboutCompany />
                     <MeetTheTeam />
               </div>
