@@ -1,32 +1,54 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components'
-import BuySellSection from './components/BuySellSection/BuySellSection'
-import BuySellSectionTwo from './components/BuySellSectionTwo/BuySellSectionTwo'
-import Footer from './components/Footer/Footer'
-import GreatExperience from './components/GreatExperience/GreatExperience'
-import OrangeBar from './components/OrangeBar/OrangeBar'
-import Oursection from './components/Oursection'
-import Testimonial from './components/Testimonial/Testimonial'
-import TopNav from './components/TopNav/TopNav'
+import BuySellSection from '../components/BuySellSection/BuySellSection'
+import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo'
+import Footer from '../components/Footer/Footer'
+import GreatExperience from '../components/GreatExperience/GreatExperience'
+import OrangeBar from '../components/OrangeBar/OrangeBar'
+import Oursection from '../components/Oursection'
+import Testimonial from '../components/Testimonial/Testimonial'
+import TopNav from '../components/TopNav/TopNav'
 
-import Valuepropositon from './components/ValueProposition/Valuepropositon'
+import Valuepropositon from '../components/ValueProposition/Valuepropositon'
 
 import './Homepage.css'
 
 export default class Homepage extends React.Component{
+    
+    state={
+        valuepropositonColor: '',
+        backgroundColor: ''
+    }
+
+    componentDidMount(){
+        this.setValuepropositionColor()
+    }
+    
+    setValuepropositionColor(){
+        if(window.location.pathname === "/landingpagetwo"){
+            this.setState({
+                valuepropositonColor: 'white',
+                backgroundColor: '#010066'
+            })
+        }
+    }
+
     render(){
         return(
             <div>
                 <div className="header">
                   <div className="dashboard-contents"> 
                     <TopNav />
-                    <Valuepropositon />
+                    <Valuepropositon 
+                        landingpagecolor={this.state.valuepropositonColor}
+                        backgroundcolor = {this.state.backgroundColor}
+                    />
                     <BuySellSection />
                     
                     <GreatExperience />
 
-                    <BuySellSectionTwo />                    
+                    <BuySellSectionTwo />                     
                     <Testimonial />
                     
                     <div className="download-app-section text-align-center">
@@ -83,3 +105,7 @@ const BuySellWidth = styled.div `
 const Button = styled.button `
     margin: 40px auto 0px auto;
 `
+
+function page(page: any, arg1: string) {
+    throw new Error('Function not implemented.')
+}

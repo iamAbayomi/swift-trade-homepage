@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Homepage from './Homepage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,8 +7,9 @@ import {
   NavLink,
   // BrowserRouter
 } from 'react-router-dom';
-import ContactUs from './ContactUs';
-import Aboutpage from './Aboutpage';
+import Homepage from './pages/Homepage';
+import ContactUs from './pages/ContactUs';
+import Aboutpage from './pages/Aboutpage';
 
 function App() {
   return (
@@ -19,6 +18,7 @@ function App() {
           <div className="main-section" >
             <Switch>
                 <Route exact path="/" component={Homepage} />
+                <Route exact path="/landingpagetwo" component={Homepage} />
                 <Route path="/contact" component={ContactUs}/>
                 <Route path="/about" component={Aboutpage} />
 
