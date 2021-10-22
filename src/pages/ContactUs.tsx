@@ -10,10 +10,12 @@ import TopNav from '../components/TopNav/TopNav';
 function ContactUs(){
     return(
         <div>
-            <TopNav />
-            <ContactUsValueProposition />
-            <ContactSection />
-            <Footer />
+            <div className="contents">
+                <TopNav />
+                <ContactUsValueProposition />
+                <ContactSection />
+                <Footer />
+            </div>
         </div>
     )
 }

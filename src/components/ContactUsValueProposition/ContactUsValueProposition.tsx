@@ -15,7 +15,7 @@ function ContactUsValueProposition(){
                         </p>
                     </div>
                     <div className="about-value-prop-image">
-                        <img className="abvp-img" src="./vectors/about-vp-vector.svg" />
+                        <img className="abvp-img" src="./vectors/contact-us-vector.svg" />
                     </div>
                 </div>
                 <img className="path-icon" src="./vectors/path-section.svg" />
