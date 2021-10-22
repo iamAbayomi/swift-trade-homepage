@@ -18,8 +18,8 @@ function Aboutpage(){
                 <AboutPageValueProposition />
                <div className="page-body">
                     <CEOTestimonial />
-                    <OurHistory />
                     <AboutCompany />
+                    <OurHistory />
                     <MeetTheTeam />
               </div>
               <Footer/>
