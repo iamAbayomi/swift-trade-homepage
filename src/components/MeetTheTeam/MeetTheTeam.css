@@ -1,28 +1,9 @@
-.about-company-section{
-    margin: 20px;
-}
-
-.about-company-contents{
-    border: 1px solid #333333;
-    margin: auto;
+.meet-the-team-section{
     max-width: 950px;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-
-.about-company-text{
-    text-align:center;
-}
-
-.about-us-img{
-    max-width: 550px;
-    width: 100%;
     margin: auto;
-    display: block;
 }
 
-.about-company-title{
+.meet-the-team-header{
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -30,9 +11,10 @@
     /* identical to box height, or 232% */
     /* Swift Solid 2 */
     color: #010066;
+    text-align: center;
 }
 
-.about-company-subtitle{
+.meet-the-team-subtitle{
     max-width: 550px;
     width: 100%;
     margin: auto;
@@ -43,9 +25,4 @@
     /* or 250% */
     text-align: center;
     color: #333333;
-}
-
-.about-company-logo{
-    display: block;
-    margin: 60px auto 10px;
 }
