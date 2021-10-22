@@ -3,3 +3,24 @@
     width: 100%;
     margin: 90px auto;
 }
+
+
+.testimonial-words{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    /* or 222% */
+    text-align: center;
+    color: #333333;
+}
+
+.testimonial-author{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    /* identical to box height, or 179% */
+    text-align: center;
+    color: #333333;
+}

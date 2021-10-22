@@ -15,9 +15,10 @@ function AboutPageValueProposition(){
                         </p>
                     </div>
                     <div className="about-value-prop-image">
-                        <img src="./vectors/about-us-vector.svg" />
+                        <img className="abvp-img" src="./vectors/about-us-vector.svg" />
                     </div>
                 </div>
+                <img className="path-icon" src="./vectors/path-section.svg" />
             </div>
         </div>
     )
