@@ -1,6 +1,7 @@
 .meet-the-team-section{
     max-width: 950px;
     margin: auto;
+    padding: 20px;
 }
 
 .meet-the-team-header{
@@ -25,4 +26,10 @@
     /* or 250% */
     text-align: center;
     color: #333333;
+}
+
+.team-image{
+    display: block;
+    max-width: 850px;
+    width: 100%;
 }

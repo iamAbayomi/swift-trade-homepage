@@ -13,10 +13,7 @@ function MeetTheTeam(){
                 </p>
                 <div className="team-profile-section">
                     <div className="profile-image">
-                        <img className="" src="./vectors/images" />
-                        <p>CEO</p>
-                        <p>Amanda Roth</p>
-
+                        <img className="team-image" src="./vectors/meet-the-team.png" />
                     </div>
                 </div>
              </div>
