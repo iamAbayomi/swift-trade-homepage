@@ -76,6 +76,9 @@
     width: 24px;
 }
 
+.text-link{
+    text-decoration: none;
+}
 
 /* Small Breakpoint */
 @media screen and (max-width: 576px){
