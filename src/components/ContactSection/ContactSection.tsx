@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import './ContactSection.css'
 
 
@@ -14,7 +15,7 @@ function ContactSection(){
                         <button className=" blue-button contact-button">Send</button>
                     </div>
                     <div className="contact-section-map">
-
+                        <img src="./vectors/map.png" />
                     </div>
                 </div>
             </div>
