@@ -2,4 +2,21 @@
     border: 1px solid #333333;
     margin: auto;
     max-width: 950px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.about-us-img{
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+.about-company-subtitle{
+    max-width: 250px;
+    width: 100%;
+    margin: auto;
 }

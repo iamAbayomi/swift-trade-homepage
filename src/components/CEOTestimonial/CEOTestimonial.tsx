@@ -1,3 +1,4 @@
+import DivisionBar from '../DivisionBar/DivisionBar'
 import './CEOTestimonial.css'
 function CEOTestimonial(){
     return(
@@ -6,7 +7,7 @@ function CEOTestimonial(){
                     Donec semper leo ut lobortis condimentum. 
                     Orci varius natoque penatibus et magnis”
             </p>
-            <div className="divider" />
+            <DivisionBar barcolor={'#858585'}  />
             <p className="testimonial-author" >Ramon Ridwan. CEO Company</p>
         </div>
     )
