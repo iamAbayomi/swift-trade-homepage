@@ -5,6 +5,7 @@ import BuySellSection from './components/BuySellSection/BuySellSection'
 import BuySellSectionTwo from './components/BuySellSectionTwo/BuySellSectionTwo'
 import Footer from './components/Footer/Footer'
 import GreatExperience from './components/GreatExperience/GreatExperience'
+import OrangeBar from './components/OrangeBar/OrangeBar'
 import Oursection from './components/Oursection'
 import Testimonial from './components/Testimonial/Testimonial'
 import TopNav from './components/TopNav/TopNav'
@@ -30,6 +31,7 @@ export default class Homepage extends React.Component{
                     
                     <div className="download-app-section text-align-center">
                         <p className="buysell-header" > Download our app</p>
+                        <OrangeBar />
                         <p className="buysell-text" >Discover exclusive deals and discounts with our mobile experience</p>
                         <div className="play-storeapp  display-flex">
                             <img src="./vectors/app-store-logo.png" />
