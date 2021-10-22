@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 // import AboutCompany from ''
+import './AboutCompany.css'
 function AboutCompany(){
     return(
         <div>

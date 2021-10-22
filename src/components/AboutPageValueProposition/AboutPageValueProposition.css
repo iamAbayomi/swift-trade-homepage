@@ -1,18 +1,25 @@
-.value-proposition{
+.about-value-proposition{
     display: flex;
-    background-color: #010066;
+    background-color: hsl(241, 100%, 20%);
+    
 }
 
-.value-proposition-text{
-
+.about-vp-contents{
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
-.value-prop-image{
-
+.about-value-proposition-text{
+    max-width: 250px;
+    width: 100%;
 }
 
+.about-value-prop-image{
+    max-width: 250px;
+    width: 100%;
+}
 
-.value-prop-heading{
+.about-value-prop-heading{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -21,11 +28,11 @@
     color: #FFFFFF;
 }
 
-.value-prop-subtitle{
+.about-value-prop-subtitle{
 
 }
 
-.value-prop-image{
+.about-value-prop-image{
 
 }
 
