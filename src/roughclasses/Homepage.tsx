@@ -6,12 +6,14 @@ import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo
 import Footer from '../components/Footer/Footer'
 import GreatExperience from '../components/GreatExperience/GreatExperience'
 import OrangeBar from '../components/OrangeBar/OrangeBar'
+import Oursection from '../components/Oursection'
 import Testimonial from '../components/Testimonial/Testimonial'
 import TopNav from '../components/TopNav/TopNav'
-import Valuepropositon from '../components/ValueProposition/Valuepropositon'
+
 
 
 import './Homepage.css'
+import Valuepropositon from './ValueProposition'
 
 export default class Homepage extends React.Component{
     
@@ -39,7 +41,10 @@ export default class Homepage extends React.Component{
                 <div className="header">
                   <div className="dashboard-contents"> 
                     <TopNav />
-                    <Valuepropositon />
+                    <Valuepropositon 
+                        landingpagecolor={this.state.valuepropositonColor}
+                        backgroundcolor = {this.state.backgroundColor}
+                    />
                     <BuySellSection />
                     
                     <GreatExperience />
