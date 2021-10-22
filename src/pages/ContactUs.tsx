@@ -1,11 +1,14 @@
 
 import React from 'react';
+import Footer from '../components/Footer/Footer';
+import TopNav from '../components/TopNav/TopNav';
 
 
 
 function ContactUs(){
     return(
         <div>
+            <TopNav />
             <div className="contact-section">
                 <p>Please note that all message will be replied within the next 12 hours</p>
                 <div className="contact-section-editfield">
@@ -20,7 +23,7 @@ function ContactUs(){
                     </div>
                 </div>
             </div>
-            
+            <Footer />
         </div>
     )
 }
