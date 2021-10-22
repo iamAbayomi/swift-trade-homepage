@@ -14,9 +14,9 @@ function ContactSection(){
                         <textarea className="text-area" name="Your Comment" placeholder="Your Comment*" />
                         <button className=" blue-button contact-button">Send</button>
                     </div>
-                    <div className="contact-section-map">
-                        <img src="./vectors/map.png" />
-                    </div>
+                    <img  className="contact-section-map"
+                        src="./vectors/map.png" />
+                    
                 </div>
             </div>
         </div>
