@@ -50,7 +50,7 @@ function Footer(){
                     <div className="instagram-section">
                         {
                             imagesBackground.map((item) => 
-                                <img src={`./vectors/${item}.svg`}/>
+                                <img className="ig-image" src={`./vectors/${item}.svg`}/>
                             )
                         }
                         

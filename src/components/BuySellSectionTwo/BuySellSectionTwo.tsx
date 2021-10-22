@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styled  from "styled-components"
+import OrangeBar from "../OrangeBar/OrangeBar"
 function BuySellSectionTwo(){
     return(
         <div>
@@ -10,6 +11,7 @@ function BuySellSectionTwo(){
                 <div className="buysell-cardview-section">
                     <BuySellCardView className="card-view buysell-cardview" >
                         <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
+                        <OrangeBar />
                         <BuySellOptions className="display-flex-withspace buysell-options" >
                             <BuySellWidth className="buysell-width">
                                 <div className="buysell-content">

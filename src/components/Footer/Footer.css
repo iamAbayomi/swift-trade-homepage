@@ -14,7 +14,15 @@
     display: grid;    
     row-gap: 10px;
     column-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(10px, 68px));
+}
+
+.ig-image{
+    width: 100%;
+}
+
+.footer-highlight{
+    /* width: 100%; */
 }
 
 .footer-section p{
