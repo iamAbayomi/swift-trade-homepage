@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components'
+import BlueValueProposition from '../components/BlueValueProposition/BlueValueProposition'
 import BuySellSection from '../components/BuySellSection/BuySellSection'
 import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo'
 import Footer from '../components/Footer/Footer'
@@ -39,7 +40,10 @@ export default class Homepage extends React.Component{
                 <div className="header">
                   <div className="dashboard-contents"> 
                     <TopNav />
-                    <Valuepropositon />
+
+                    {/* <Valuepropositon /> */}
+                    <BlueValueProposition />
+
                     <BuySellSection />
                     
                     <GreatExperience />
