@@ -1,5 +1,5 @@
 import React from 'react'
-import './ModalForm.css'
+import './ModalClass.css'
 
 
 type CardProperties = {

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components'
+import Login from '../authentication/Login'
 import BlueValueProposition from '../components/BlueValueProposition/BlueValueProposition'
 import BuySellSection from '../components/BuySellSection/BuySellSection'
 import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo'
@@ -65,7 +66,9 @@ export default class Homepage extends React.Component{
                         </div>
                     </div>
 
-                 <Footer/>
+                    <Login />
+
+                    <Footer/>
                     </div>
                 </div>
             </div>

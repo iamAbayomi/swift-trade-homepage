@@ -10,6 +10,7 @@ import {
 import Homepage from './pages/Homepage';
 import ContactUs from './pages/ContactUs';
 import Aboutpage from './pages/Aboutpage';
+import ModalWithCards from './components/ModalForm/ModalWithCards';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/landingpagetwo" component={Homepage} />
                 <Route path="/contact" component={ContactUs}/>
                 <Route path="/about" component={Aboutpage} />
+                <Route path="/modalforms" component={ModalWithCards} />
 
             </Switch>
             
