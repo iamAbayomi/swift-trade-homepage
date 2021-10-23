@@ -24,9 +24,9 @@ export default class Login extends React.Component {
 
     
     showSignUp(){
-        this.setState({
-            signUp: !this.state.signUp
-        })
+        // this.setState( (item: any) => 
+        // ({   signUp : !item.signUp })
+        // )
     }
     
 
