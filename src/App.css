@@ -84,6 +84,26 @@
     text-decoration: none;
 }
 
+.login-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    /* identical to box height, or 167% */
+    color: #2F2F2F;
+}
+
+.login-click-text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    /* identical to box height, or 167% */
+    /* Swift Solid 2 */
+    color: #010066;
+}
 
 /* Small Breakpoint */
 @media screen and (max-width: 576px){

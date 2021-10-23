@@ -26,7 +26,7 @@ export default InputField;
 
 
 const EditField = styled.input `
-    width: 300px;
+    width: 250px;
     height: 44px;
     display: block;
     padding-left: 30px;
