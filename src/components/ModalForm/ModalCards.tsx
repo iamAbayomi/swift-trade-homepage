@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import './ModalClass.css'
 
@@ -9,12 +10,11 @@ type CardProperties = {
         cardSubtitleText: string,
         cardButtonTrue : boolean
     } | undefined,
-    modalContent: string
 }
 
 
 
-export default class ConfirmEmail extends React.Component<CardProperties> {
+export default class ModalCards extends React.Component<CardProperties> {
     modal: React.RefObject<HTMLDivElement>
     
     constructor(props: CardProperties){
@@ -37,21 +37,14 @@ export default class ConfirmEmail extends React.Component<CardProperties> {
                 <div className="modal show-modal" ref={this.modal}>
                     <div className="modal-content">
                         <span className="close-button" onClick={this.toogleModal.bind(this)}>x</span>
-                        {/* <InformationCard 
-                            response = {this.props.response}
-                        /> */}
-                        {console.log(this.props.modalContent)}
-                        {
-                            
-                    
-
-                            // this.props.modalContent === "CompleteTransaction" ? <CompleteTransaction />
-                            // : this.props.modalContent === "UploadPaymentDetails" ? <UploadPaymentDetails/>
-                            // : <TransactionCompleted />
-                        }
+                        <div className="modal-contentd">
+                          <div className="modal-elements">
+                            <img className="modal-image" src={this.props.response?.cardImageSrc} />
+                            <p className="modal-heading"> {this.props.response?.cardHeadingText} </p>
+                            <p className="modal-subtitle">{this.props.response?.cardSubtitleText}</p>
+                         </div>
+                        </div>
                         
-                        {/* <UploadPaymentDetails /> */}
-                        {/* <TransactionCompleted/> */}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components'
+import ConfirmEmail from '../authentication/ConfimEmail'
 import Login from '../authentication/Login'
 import Signup from '../authentication/Signup'
 import BlueValueProposition from '../components/BlueValueProposition/BlueValueProposition'
@@ -8,13 +9,17 @@ import BuySellSection from '../components/BuySellSection/BuySellSection'
 import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo'
 import Footer from '../components/Footer/Footer'
 import GreatExperience from '../components/GreatExperience/GreatExperience'
+import ModalCards from '../components/ModalForm/ModalCards'
 import OrangeBar from '../components/OrangeBar/OrangeBar'
 import Testimonial from '../components/Testimonial/Testimonial'
 import TopNav from '../components/TopNav/TopNav'
 import Valuepropositon from '../components/ValueProposition/Valuepropositon'
 
+import '../classes/ModalData'
+
 
 import './Homepage.css'
+import { response } from '../classes/ModalData'
 
 export default class Homepage extends React.Component{
     
@@ -67,8 +72,11 @@ export default class Homepage extends React.Component{
                         </div>
                     </div>
 
-                    <Login />
+                    {/* <Login /> */}
                     {/* <Signup /> */}
+                    {/* <ConfirmEmail/> */}
+                    <ModalCards response={response[0].confirmEmailAddress}/>
+                    {/* <ModalCards response={response[1].resetPassword}/> */}
 
                     <Footer/>
                     </div>
