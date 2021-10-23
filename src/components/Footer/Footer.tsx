@@ -3,7 +3,7 @@
 import './Footer.css'
 
 // const companyLinks = ['Home', 'About Us', 'Blog', 'Sell', 'Contact Us']
-const companyLinks =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'},  { link: '/blog' , name: 'Blog'}, { link: '/sellbitcoin' , name: 'Sell'} , { link: '/contact' , name: 'Contact Us'}]
+const companyLinks =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'},  { link: '/blog' , name: 'Blog'}, { link: '/#buysellsection' , name: 'Sell'} , { link: '/contact' , name: 'Contact Us'}]
 const contactUs = ['(+234) 137632128', 'Company@yahoo.com', 'Address goes here', 'Download Our App']
 
 const imagesBackground = ['grey-background', 'grey-add-background', 'grey-background', 'grey-background', 

@@ -29,9 +29,11 @@ function TopNav(){
 
     return(
         <div className="top-nav display-flex-withspace">
-            <div className="brand-logo">
-                <img src="./vectors/swift-logo.svg" />
-            </div>
+            <a className="no-link" href="/">    
+                <div className="brand-logo">
+                    <img src="./vectors/swift-logo.svg" />
+                </div>
+            </a>
             <div className="top-nav-menu display-flex-withspace">
                 {menuItems.map((menu) =>
                     <a href={menu.link} className="top-nav-menu-text text-link">
