@@ -6,8 +6,7 @@ import styled from 'styled-components'
 import SignUpButton from '../ui-components/buttons/SignUpButton';
 import Login from '../../authentication/Login';
 
-const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}]
-//,{ link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
+const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'},{ link: '/#buysellsection' , name: 'Sell Bitcoin/GiftCard'}]
 
 
 function TopNav(){

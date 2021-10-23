@@ -5,12 +5,12 @@ import SignUpButton from "../ui-components/buttons/SignUpButton"
 function BuySellSectionTwo(){
     return(
         <div>
-            <div className="buy-sell-section">
+            <div className="buy-sell-section" >
                 <div className="overflow-hidden buysell-vector">
                     <BlueVector src="./vectors/blue-vector.svg" />
                 </div>
                 <div className="buysell-cardview-section">
-                    <BuySellCardView className="card-view buysell-cardview" >
+                    <BuySellCardView className="card-view buysell-cardview" id="buysellsection" >
                         <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
                         <OrangeBar />
                         <BuySellOptions className="display-flex-withspace buysell-options" >
