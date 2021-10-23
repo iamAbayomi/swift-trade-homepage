@@ -1,12 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import React, { ChangeEvent, MouseEventHandler, useState } from 'react'
 import './TopNav.css';
 import styled from 'styled-components'
 
 const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}, { link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
 
+
 function TopNav(){
+    const [isActive, setisActive] = useState(false)
+
+    
+    function showDashboard(){
+        setisActive(!isActive)   
+    }
+
     return(
         <div className="top-nav display-flex-withspace">
             <div className="brand-logo">
@@ -27,11 +35,23 @@ function TopNav(){
                     </LoginText>
                 </a>
                 <a href="/signup" className="text-link" > 
-                    <button className="blue-button">
+                    <button className="blue-button top-nav-button">
                             GET STARTED
                     </button>
                 </a>
             </div>
+            <div className={`mobile-menu ${isActive ? "is-open" : "" }`}>
+                {menuItems.map((menu) =>
+                    <a href={menu.link} className="mobile-menu-text text-link">
+                        {menu.name}
+                    </a>
+                    )
+                }                
+            </div>
+            <img className="menu-toggle" id="toggle-menu" 
+                    src="/vectors/menu.svg"
+                    onClick={showDashboard}
+                />
         </div>
     )
 }
