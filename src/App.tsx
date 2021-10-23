@@ -23,7 +23,6 @@ function App() {
                 <Route path="/contact" component={ContactUs}/>
                 <Route path="/about" component={Aboutpage} />
                 <Route path="/modalforms" component={ModalWithCards} />
-
             </Switch>
             
           </div>
