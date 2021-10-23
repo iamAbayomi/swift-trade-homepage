@@ -72,10 +72,10 @@ export default class Homepage extends React.Component{
                         </div>
                     </div>
 
-                    {/* <Login /> */}
+                    <Login />
                     {/* <Signup /> */}
                     {/* <ConfirmEmail/> */}
-                    <ModalCards response={response[0].confirmEmailAddress}/>
+                    {/* <ModalCards response={response[0].confirmEmailAddress}/> */}
                     {/* <ModalCards response={response[1].resetPassword}/> */}
 
                     <Footer/>
