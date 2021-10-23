@@ -13,7 +13,9 @@ function Valueproposition(){
                     <p className="value-prop-subtitle subtitle-text" >Swift Trade is a platform for trading your bitcoin and
                         giftcard at the best rate, why not give us a trial.
                     </p>
-                    <Button className="blue-button get-started">GET STARTED</Button>
+                    <a href="/signup" className="text-link" >
+                        <Button className="blue-button get-started">GET STARTED</Button>
+                    </a>
                 </div>
                 <div className="value-proposition-icon">
                     <img className="value-proposition-icon" src="./vectors/vp-vector.svg" />

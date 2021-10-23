@@ -29,7 +29,9 @@ function BuySellSectionTwo(){
                     </BuySellCardView>
                 </div>
                 <div className="buysell-button">
+                <a href="/signup" className="text-link" >
                     <Button className="blue-button" >GET STARTED</Button>
+                </a>
                 </div>
             </div>
         </div>

@@ -41,8 +41,8 @@ export default class Homepage extends React.Component{
                   <div className="dashboard-contents"> 
                     <TopNav />
 
-                    {/* <Valuepropositon /> */}
-                    <BlueValueProposition />
+                    <Valuepropositon />
+                    {/* <BlueValueProposition /> */}
 
                     <BuySellSection />
                     

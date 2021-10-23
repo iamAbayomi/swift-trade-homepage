@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import './TopNav.css';
@@ -20,12 +21,16 @@ function TopNav(){
                 }                
             </div>
             <div className="top-nav-action-section display-flex-withspace">
-                <LoginText className="text-button login-button">
-                    Login
-                </LoginText>
-                <button className="blue-button">
-                        GET STARTED
-                </button>
+                <a href="/login" className="text-link" >
+                    <LoginText className="text-button login-button">
+                        Login
+                    </LoginText>
+                </a>
+                <a href="/signup" className="text-link" > 
+                    <button className="blue-button">
+                            GET STARTED
+                    </button>
+                </a>
             </div>
         </div>
     )
