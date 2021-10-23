@@ -13,6 +13,7 @@ function BuySellSectionTwo(){
                     <BuySellCardView className="card-view buysell-cardview" id="buysellsection" >
                         <p className="buysell-header text-align-center" >Buy and Sell from anywhere</p>
                         <OrangeBar />
+                        <a className="no-link" href="https://swift-user-dashboard.netlify.app/"> 
                         <BuySellOptions className="display-flex-withspace buysell-options" >
                             <BuySellWidth className="buysell-width">
                                 <div className="buysell-content">
@@ -27,6 +28,8 @@ function BuySellSectionTwo(){
                                 </div>
                             </BuySellWidth>
                         </BuySellOptions>
+                        </a>
+
                     </BuySellCardView>
                 </div>
                 <div className="buysell-button">

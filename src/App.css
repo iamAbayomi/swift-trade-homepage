@@ -80,6 +80,11 @@
     text-decoration: none;
 }
 
+.no-link{
+    text-decoration: none;
+}
+
+
 /* Small Breakpoint */
 @media screen and (max-width: 576px){
     :root{

@@ -21,6 +21,7 @@ function Valueproposition(){
                     <img className="value-proposition-icon" src="./vectors/vp-vector.svg" />
                 </div>
             </div>
+            
 
         </div>
     )
