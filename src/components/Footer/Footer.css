@@ -23,6 +23,9 @@
 
 .footer-highlight{
     /* width: 100%; */
+    display: block;
+    text-decoration: none;
+    margin: 10px 0px;
 }
 
 .footer-section p{

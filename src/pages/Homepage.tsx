@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import styled from 'styled-components'
-import ConfirmEmail from '../authentication/ConfimEmail'
-import Login from '../authentication/Login'
-import Signup from '../authentication/Signup'
+
 import BlueValueProposition from '../components/BlueValueProposition/BlueValueProposition'
 import BuySellSection from '../components/BuySellSection/BuySellSection'
 import BuySellSectionTwo from '../components/BuySellSectionTwo/BuySellSectionTwo'
@@ -20,6 +18,8 @@ import '../classes/ModalData'
 
 import './Homepage.css'
 import { response } from '../classes/ModalData'
+import Login from '../authentication/Login'
+
 
 export default class Homepage extends React.Component{
     

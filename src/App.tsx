@@ -11,6 +11,7 @@ import Homepage from './pages/Homepage';
 import ContactUs from './pages/ContactUs';
 import Aboutpage from './pages/Aboutpage';
 import ModalWithCards from './components/ModalForm/ModalWithCards';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/contact" component={ContactUs}/>
                 <Route path="/about" component={Aboutpage} />
                 <Route path="/modalforms" component={ModalWithCards} />
+                <Route path="/404Error" component={ErrorPage}/>
             </Switch>
             
           </div>

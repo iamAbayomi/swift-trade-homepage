@@ -4,8 +4,7 @@ import React, { ChangeEvent, MouseEventHandler, useState } from 'react'
 import './TopNav.css';
 import styled from 'styled-components'
 
-const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}]
-    // { link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
+const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'},{ link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
 
 
 function TopNav(){
