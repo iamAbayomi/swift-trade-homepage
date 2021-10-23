@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styled  from "styled-components"
 import OrangeBar from "../OrangeBar/OrangeBar"
+import SignUpButton from "../ui-components/buttons/SignUpButton"
 function BuySellSectionTwo(){
     return(
         <div>
@@ -29,9 +30,7 @@ function BuySellSectionTwo(){
                     </BuySellCardView>
                 </div>
                 <div className="buysell-button">
-                <a href="/signup" className="text-link" >
-                    <Button className="blue-button" >GET STARTED</Button>
-                </a>
+                <SignUpButton class="blue-button" />
                 </div>
             </div>
         </div>

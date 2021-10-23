@@ -2,6 +2,7 @@
 import React from 'react'
 import './GreatExperience.css'
 import styled from 'styled-components';
+import SignUpButton from '../ui-components/buttons/SignUpButton';
 
 function GreatExperience(){
     return (
@@ -18,11 +19,7 @@ function GreatExperience(){
                         exchange digital and fiat assets safely. 
                         Owned and managed by Swift trade NG established and Incoperated in Nigeria.
                     </p>
-                    <a href="/signup" className="text-link" >
-                    <button className="blue-button" >
-                        GET STARTED
-                    </button>
-                    </a>
+                    <SignUpButton class="blue-button" />
                 </FirstSection>
                 <div className="second-section">
                     <Image className="great-experience-image" src="./vectors/application-display.svg" />

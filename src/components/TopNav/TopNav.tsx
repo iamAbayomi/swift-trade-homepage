@@ -3,14 +3,17 @@
 import React, { ChangeEvent, MouseEventHandler, useState } from 'react'
 import './TopNav.css';
 import styled from 'styled-components'
+import SignUpButton from '../ui-components/buttons/SignUpButton';
+import Login from '../../authentication/Login';
 
-const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'},{ link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
+const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}]
+//,{ link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
 
 
 function TopNav(){
     const [isActive, setisActive] = useState(false)
 
-    const [isOpen, setOpen] = useState(false)
+    const [isLogin, setLogin] = useState(false)
     
     function showDashboard(){
         setisActive(!isActive)   
@@ -19,6 +22,10 @@ function TopNav(){
     function closeDashbaord(){
         // setOpen(!isOpen)
         setisActive(!isActive)   
+    }
+
+    function login(){
+        setLogin(!isLogin)
     }
 
     return(
@@ -36,15 +43,16 @@ function TopNav(){
             </div>
             <div className="top-nav-action-section display-flex-withspace">
                 <a href="/login" className="text-link" >
-                    <LoginText className="text-button login-button">
+                    <LoginText 
+                        className="text-button login-button"
+                        onClick={login}
+                        >
                         Login
                     </LoginText>
                 </a>
-                <a href="/signup" className="text-link" > 
-                    <button className="blue-button top-nav-button">
-                            GET STARTED
-                    </button>
-                </a>
+                
+                {/* Created a component and pass the props as class */}
+                <SignUpButton class="blue-button top-nav-button" />
             </div>
             <div className={`mobile-menu ${isActive ? "is-open" : "" }`}>
                 <img className="close-icon" 
@@ -62,6 +70,9 @@ function TopNav(){
                     src="/vectors/menu.svg"
                     onClick={showDashboard}
                 />
+            {
+                isLogin ? <Login/> : <div style={ {display : `none`}}/>
+            }
         </div>
     )
 }

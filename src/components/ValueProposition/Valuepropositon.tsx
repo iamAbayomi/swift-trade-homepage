@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import SignUpButton from '../ui-components/buttons/SignUpButton';
 import './ValueProposition.css'
 
 function Valueproposition(){
@@ -13,9 +14,8 @@ function Valueproposition(){
                     <p className="value-prop-subtitle subtitle-text" >Swift Trade is a platform for trading your bitcoin and
                         giftcard at the best rate, why not give us a trial.
                     </p>
-                    <a href="/signup" className="text-link" > 
-                        <Button className="blue-button get-started">GET STARTED</Button>
-                    </a>
+                    
+                    <SignUpButton class="blue-button get-started" />
                 </div>
                 <div className="value-proposition-icon">
                     <img className="value-proposition-icon" src="./vectors/vp-vector.svg" />
