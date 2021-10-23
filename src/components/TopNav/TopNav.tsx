@@ -43,14 +43,14 @@ function TopNav(){
                 }                
             </div>
             <div className="top-nav-action-section display-flex-withspace">
-                <a href="/login" className="text-link" >
+                
                     <LoginText 
                         className="text-button login-button"
                         onClick={login}
                         >
                         Login
                     </LoginText>
-                </a>
+                
                 
                 {/* Created a component and pass the props as class */}
                 <SignUpButton class="blue-button top-nav-button" />
