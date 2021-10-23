@@ -4,14 +4,21 @@ import React, { ChangeEvent, MouseEventHandler, useState } from 'react'
 import './TopNav.css';
 import styled from 'styled-components'
 
-const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}, { link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
+const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'}]
+    // { link: '/sellbitcoin' , name: 'Sell Bitcoin/GiftCard'}]
 
 
 function TopNav(){
     const [isActive, setisActive] = useState(false)
 
+    const [isOpen, setOpen] = useState(false)
     
     function showDashboard(){
+        setisActive(!isActive)   
+    }
+
+    function closeDashbaord(){
+        // setOpen(!isOpen)
         setisActive(!isActive)   
     }
 
@@ -41,6 +48,10 @@ function TopNav(){
                 </a>
             </div>
             <div className={`mobile-menu ${isActive ? "is-open" : "" }`}>
+                <img className="close-icon" 
+                    src="./vectors/cancel-icon.svg"
+                    onClick={closeDashbaord}
+                />
                 {menuItems.map((menu) =>
                     <a href={menu.link} className="mobile-menu-text text-link">
                         {menu.name}

@@ -63,6 +63,15 @@
     box-sizing: border-box;
 }
 
+.close-icon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    color: white;
+
+}
+
 /* Small Breakpoint */
 @media screen and (max-width: 576px){
     .search-bar, .username, .notifications-icon{
