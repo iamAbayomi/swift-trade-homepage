@@ -22,7 +22,7 @@ const SignUpButton : React.FC<Props> = (Props) => {
                  GET STARTED
             </button>
             {
-                showSignup ? <SignUp /> : <div/>
+                showSignup ? <SignUp  /> : <div style={ {display : `none`}}/>
             }
         </div>
     )
