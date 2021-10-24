@@ -1,10 +1,13 @@
 import axios from "axios"
 import React from "react"
 import styled from "styled-components"
+import { response } from "../classes/ModalData"
+import ModalCards from "../components/ModalForm/ModalCards"
 import CustomizeButton from "../components/ui-components/buttons/CustomizeButton"
 import InputField from "../components/ui-components/InputField"
 import ModalHeading from "../components/ui-components/ModalHeading"
 import Subtitle from "../components/ui-components/typography/Subtitle"
+import Login from "./Login"
 
 
 export default class SignUp extends React.Component{
@@ -20,7 +23,23 @@ export default class SignUp extends React.Component{
         last_name: '',
         email: '',
         password: '',
-        phone: ''
+        phone: '',
+        loginIn: false,
+        confimPassword: false
+    }
+
+    showLogIn(){
+        this.setState({
+            loginIn : !this.state.loginIn
+        })
+        this.toogleModal()
+    }
+
+    confirmPassword(){
+        this.setState({
+            confimPassword: !this.confirmPassword
+        })
+        this.toogleModal()
     }
 
     toogleModal(){
@@ -44,6 +63,7 @@ export default class SignUp extends React.Component{
                 })
                 .then((res)=>{
                     console.log('This is the data', res.data)
+                    this.confirmPassword()
                 })
                 .catch((err) => {
                     console.log(err)
@@ -123,6 +143,7 @@ export default class SignUp extends React.Component{
                                         "
                                         weight="500"
                                      />
+                                    
                                 </EditSection>
                                     <CustomizeButton
                                         width={"134px"} 
@@ -133,9 +154,19 @@ export default class SignUp extends React.Component{
                                         onClick={this.signUp.bind(this)}  
                                     />
                                 
+                                <p className="login-text">Already a member? 
+                                        <span className="login-click-text"
+                                            onClick={this.showLogIn.bind(this)}
+                                        > Login</span></p>
                             </ClassContainer>
                     </div>
                 </div>
+                {
+                    this.state.loginIn ? <Login/> : <div style={{display: `none`}}/>
+                }
+                {
+                    this.state.loginIn ? <ModalCards response={response[1].resetPassword}/> : <div style={{display: `none`}}/>
+                }
             </div>
                 
             )

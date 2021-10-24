@@ -8,6 +8,9 @@ import InputField from "../components/ui-components/InputField"
 import ModalHeading from "../components/ui-components/ModalHeading"
 import Subtitle from "../components/ui-components/typography/Subtitle"
 import SignUp from "./Signup"
+import Resetpassword from "./ResetPassword"
+import ModalCards from "../components/ModalForm/ModalCards"
+import { response } from "../classes/ModalData"
 
 export default class Login extends React.Component{
     modal: React.RefObject<HTMLDivElement>
@@ -23,20 +26,19 @@ export default class Login extends React.Component{
         resetPassword: false
     }
 
-    componentDidMount(){
-        
-    }
-    
+
     showSignUp(){
         this.setState({
             signUp: !this.state.signUp
         })
+        this.toogleModal()
     }
     
     showResetPassword(){
         this.setState({
             resetPassword: !this.state.resetPassword
         })
+        this.toogleModal()
     }
 
     toogleModal(){
@@ -118,16 +120,20 @@ export default class Login extends React.Component{
                                 />
 
                                 <p className="login-text">Don't have an account yet? <span className="login-click-text" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
-
-                                {
-                                    this.state.signUp ? <SignUp/> : <div style={{display: `none`}}/>
-                                }
-
-                                {/* <SignUp /> */}
+                                
 
                             </ClassContainer>
                     </div>
                 </div>
+                
+                {
+                    this.state.signUp ? <SignUp/> : <div style={{display: `none`}}/>
+                }
+
+                {
+                    this.state.resetPassword ? <ModalCards response={response[1].resetPassword}/> : <div style={{display: `none`}}/>
+                                    
+                } 
             </div>
                 
             )
