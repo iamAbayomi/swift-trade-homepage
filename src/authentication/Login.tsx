@@ -1,7 +1,8 @@
 import axios from "axios"
 import React from "react"
+import { Router } from "react-router"
 import styled from "styled-components"
-
+import { useHistory } from "react-router"
 import CustomizeButton from "../components/ui-components/buttons/CustomizeButton"
 import InputField from "../components/ui-components/InputField"
 import ModalHeading from "../components/ui-components/ModalHeading"
@@ -9,11 +10,20 @@ import Subtitle from "../components/ui-components/typography/Subtitle"
 import SignUp from "./Signup"
 
 
-export default class Login extends React.Component {
+
+interface StateTest{
+    email: string | undefined,
+    password: string | undefined,
+    signUp: false | undefined
+}
+
+export default class Login extends React.Component{
     modal: React.RefObject<HTMLDivElement>
+    toggle: boolean
     constructor(props: any){
         super(props)
-        this.modal = React.createRef()
+        this.modal = React.createRef()            
+        this.toggle = false
     }
 
     state = {
@@ -22,11 +32,16 @@ export default class Login extends React.Component {
         signUp: false
     }
 
+    componentDidMount(){
+        
+    }
     
     showSignUp(){
-        // this.setState( (item: any) => 
-        // ({   signUp : !item.signUp })
-        // )
+        console.log('value of the state.signUp' + this.state.signUp)
+        this.setState({
+            signUp: !this.state.signUp
+        })
+        console.log('value of the state.signUp' + this.state.signUp)
     }
     
 
@@ -45,6 +60,7 @@ export default class Login extends React.Component {
         })
         .then((res) => {
             console.log('This is the data', res.data)
+            
         })
         .catch((err)=>{
             console.log(err)
@@ -104,11 +120,13 @@ export default class Login extends React.Component {
                                     onClick= {this.login.bind(this)}
                                 />
 
-                                <p className="login-text">Don't have an account yet? <span className="login-click-text" onClick={this.showSignUp}> Sign Up</span></p>
+                                <p className="login-text">Don't have an account yet? <span className="login-click-text" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
 
                                 {
                                     this.state.signUp ? <SignUp/> : <div style={{display: `none`}}/>
                                 }
+
+                                {/* <SignUp /> */}
 
                             </ClassContainer>
                     </div>

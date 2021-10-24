@@ -72,7 +72,7 @@ function TopNav(){
                     onClick={showDashboard}
                 />
             {
-                isLogin ? <Login/> : <div style={ {display : `none`}}/>
+                isLogin ? <Login /> : <div style={ {display : `none`}}/>
             }
         </div>
     )
