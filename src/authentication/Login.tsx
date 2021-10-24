@@ -9,27 +9,18 @@ import ModalHeading from "../components/ui-components/ModalHeading"
 import Subtitle from "../components/ui-components/typography/Subtitle"
 import SignUp from "./Signup"
 
-
-
-interface StateTest{
-    email: string | undefined,
-    password: string | undefined,
-    signUp: false | undefined
-}
-
 export default class Login extends React.Component{
     modal: React.RefObject<HTMLDivElement>
-    toggle: boolean
     constructor(props: any){
         super(props)
         this.modal = React.createRef()            
-        this.toggle = false
     }
 
     state = {
         email: '',
         password: '',
-        signUp: false
+        signUp: false,
+        resetPassword: false
     }
 
     componentDidMount(){
@@ -37,13 +28,16 @@ export default class Login extends React.Component{
     }
     
     showSignUp(){
-        console.log('value of the state.signUp' + this.state.signUp)
         this.setState({
             signUp: !this.state.signUp
         })
-        console.log('value of the state.signUp' + this.state.signUp)
     }
     
+    showResetPassword(){
+        this.setState({
+            resetPassword: !this.state.resetPassword
+        })
+    }
 
     toogleModal(){
         this.modal.current?.classList.toggle('show-modal')
@@ -109,7 +103,10 @@ export default class Login extends React.Component{
                                             onChange={this.handleuserPasswordChanged.bind(this)}                 
                                         />
                                     </div>
-                                    <ForgotPasswordText> I forgot password </ForgotPasswordText>
+                                    <ForgotPasswordText 
+                                        onClick={this.showResetPassword.bind(this)}> 
+                                        I forgot password 
+                                    </ForgotPasswordText>
                                 </EditSection>
                                 <CustomizeButton
                                     width={"134px"} 
