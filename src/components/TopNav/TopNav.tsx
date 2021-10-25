@@ -65,7 +65,13 @@ function TopNav(){
                         {menu.name}
                     </a>
                     )
-                }                
+                }    
+                <a 
+                    className="mobile-menu-text text-link"
+                    onClick={login}
+                    >
+                    Login
+                </a>            
             </div>
             <img className="menu-toggle" id="toggle-menu" 
                     src="/vectors/menu.svg"
