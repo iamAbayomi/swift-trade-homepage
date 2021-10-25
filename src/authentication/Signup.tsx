@@ -37,7 +37,7 @@ export default class SignUp extends React.Component{
 
     confirmPassword(){
         this.setState({
-            confimPassword: !this.confirmPassword
+            confimPassword: !this.state.confimPassword
         })
         this.toogleModal()
     }
@@ -150,8 +150,9 @@ export default class SignUp extends React.Component{
                                         height={"44px"} 
                                         color={"white"} 
                                         backgroundColor={"#010066"} 
-                                        buttonText={"Login"}  
+                                        buttonText={"SignUp"}  
                                         onClick={this.signUp.bind(this)}  
+                                        
                                     />
                                 
                                 <p className="login-text">Already a member? 
@@ -165,8 +166,10 @@ export default class SignUp extends React.Component{
                     this.state.loginIn ? <Login/> : <div style={{display: `none`}}/>
                 }
                 {
-                    this.state.loginIn ? <ModalCards response={response[1].resetPassword}/> : <div style={{display: `none`}}/>
+                    this.state.confimPassword ? <ModalCards response={response[0].confirmEmailAddress}/> : <div style={{display: `none`}}/>
                 }
+
+                
             </div>
                 
             )
