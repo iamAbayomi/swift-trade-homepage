@@ -25,7 +25,9 @@ export default class SignUp extends React.Component{
         password: '',
         phone: '',
         loginIn: false,
-        confimPassword: false
+        confimPassword: false,
+        responseMessage: '',
+        responseStatus: 0
     }
 
     showLogIn(){
@@ -40,6 +42,14 @@ export default class SignUp extends React.Component{
             confimPassword: !this.state.confimPassword
         })
         this.toogleModal()
+    }
+
+    
+    setresponseStatusAndMessage(status: any, message: any){
+        this.setState({
+            responseMessage: message,
+            responseStatus: status
+        })
     }
 
     toogleModal(){
@@ -61,9 +71,10 @@ export default class SignUp extends React.Component{
                     email:  this.state.email,
                     password: this.state.password
                 })
-                .then((res)=>{
+                .then((res: any) => {
                     console.log('This is the data', res.data)
-                    this.confirmPassword()
+                    this.setresponseStatusAndMessage(res.status ,res.data.message)
+                    this.showLogIn()
                 })
                 .catch((err) => {
                     console.log(err)
@@ -143,6 +154,14 @@ export default class SignUp extends React.Component{
                                         "
                                         weight="500"
                                      />
+
+{
+                                    this.state.responseStatus === 200? <SuccessMessageText>{ this.state.responseMessage}</SuccessMessageText> 
+                                    :   <ErrorMessageText>{ this.state.responseMessage}</ErrorMessageText>
+
+                                }
+
+                                
                                     
                                 </EditSection>
                                     <CustomizeButton
@@ -191,4 +210,25 @@ const EditSection = styled.p`
     display: block;
     width: 300px;
     margin: 40px auto 20px;
+`
+
+const SuccessMessageText = styled.p`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    /* Swift gray */
+    color: green;
+`
+
+
+const ErrorMessageText = styled.p`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    /* Swift gray */
+    color: red;
 `

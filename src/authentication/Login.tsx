@@ -12,18 +12,34 @@ import Resetpassword from "./ResetPassword"
 import ModalCards from "../components/ModalForm/ModalCards"
 import { response } from "../classes/ModalData"
 
-export default class Login extends React.Component{
+import {withRouter} from 'react-router-dom'
+
+
+// export const Component = withRouter(({history, location}) => {
+
+// }) 
+
+
+export default class Login extends  React.Component{
+    
     modal: React.RefObject<HTMLDivElement>
+    history: any
     constructor(props: any){
         super(props)
-        this.modal = React.createRef()            
+        this.modal = React.createRef()       
+        
     }
+
+     
+    
 
     state = {
         email: '',
         password: '',
         signUp: false,
-        resetPassword: false
+        resetPassword: false,
+        responseMessage: '',
+        responseStatus: 0
     }
 
 
@@ -41,6 +57,13 @@ export default class Login extends React.Component{
         this.toogleModal()
     }
 
+    setresponseStatusAndMessage(status: any, message: any){
+        this.setState({
+            responseMessage: message,
+            responseStatus: status
+        })
+    }
+
     toogleModal(){
         this.modal.current?.classList.toggle('show-modal')
     }
@@ -50,16 +73,21 @@ export default class Login extends React.Component{
     }
 
     login(){
+        
         axios.post('https://swift-trade-v1.herokuapp.com/api/v1/auth/login', {
             email: this.state.email,
             password: this.state.password
         })
-        .then((res) => {
-            console.log('This is the data', res.data)
-            
+        .then((res: any) => {
+            console.log('This is the data', res)
+            // window.location.replace('https://swift-user-dashboard.netlify.app/') 
+            window.location.href = `https://swift-user-dashboard.netlify.app/${res.data.data}`
+            console.log(res.status)
+            this.setresponseStatusAndMessage(res.status ,res.data.message)
         })
         .catch((err)=>{
             console.log(err)
+            this.setresponseStatusAndMessage("err", err.message)
         })
         console.log(this.state.email)
     }
@@ -75,6 +103,7 @@ export default class Login extends React.Component{
 
 
     render(){
+        
             return(
             <div className="modal-container">
                 <div className="modal show-modal" ref={this.modal}>
@@ -110,6 +139,15 @@ export default class Login extends React.Component{
                                         I forgot password 
                                     </ForgotPasswordText>
                                 </EditSection>
+                                {
+                                    this.state.responseStatus === 200? <SuccessMessageText>{ this.state.responseMessage}</SuccessMessageText> 
+                                    :   <ErrorMessageText>{ this.state.responseMessage}</ErrorMessageText>
+
+                                }
+
+                                
+
+
                                 <CustomizeButton
                                     width={"134px"} 
                                     height={"44px"} 
@@ -167,4 +205,26 @@ const ForgotPasswordText = styled.p`
     text-align: right;
     /* Swift gray */
     color: #828282;
+`
+
+
+const SuccessMessageText = styled.p`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    /* Swift gray */
+    color: green;
+`
+
+
+const ErrorMessageText = styled.p`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    /* Swift gray */
+    color: red;
 `
