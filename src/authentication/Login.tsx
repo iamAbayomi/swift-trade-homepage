@@ -81,7 +81,7 @@ export default class Login extends  React.Component{
         .then((res: any) => {
             console.log('This is the data', res)
             // window.location.replace('https://swift-user-dashboard.netlify.app/') 
-            window.location.href = `https://swift-user-dashboard.netlify.app/${res.data.data}`
+            window.location.href = `https://swift-user-dashboard.netlify.app/token/${res.data.data}`
             console.log(res.status)
             this.setresponseStatusAndMessage(res.status ,res.data.message)
         })
