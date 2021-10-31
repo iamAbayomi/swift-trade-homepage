@@ -10,12 +10,15 @@ import ModalHeading from "../components/ui-components/ModalHeading"
 import Subtitle from "../components/ui-components/typography/Subtitle"
 import Login from "./Login"
 
+import SimpleReactValidator from "simple-react-validator"
 
 export default class SignUp extends React.Component{
     modal: React.RefObject<HTMLDivElement>
+    validator: SimpleReactValidator
     constructor(props: any){
         super(props)
         this.modal = React.createRef()
+        this.validator = new SimpleReactValidator()
     }
 
     state = {
@@ -66,6 +69,16 @@ export default class SignUp extends React.Component{
         this.setState({showSpinner : !this.state.showSpinner})   
        }
    
+       
+    validateForm(){
+        if(this.validator.allValid()){
+            this.signUp()
+        }else{
+            this.validator.showMessages()
+            this.forceUpdate()
+        }
+    }
+
 
     signUp(){
         console.log("this is the user fullname "+this.state.fullname)
@@ -82,8 +95,8 @@ export default class SignUp extends React.Component{
                 })
                 .then((res: any) => {
                     console.log('This is the data', res.data)
-                    this.setresponseStatusAndMessage(res.status ,res.data.message + '\n Redirecting you to login page to complete login')
-                    this.showSpinner()
+                    this.setresponseStatusAndMessage(res.status ,res.data.message + '\n Redirecting you to login page to login')
+                    // this.showSpinner()
                     setTimeout(() =>{ this.showLogIn()}, 3000)})
                 .catch((err) => {
                     console.log(err)
@@ -134,6 +147,7 @@ export default class SignUp extends React.Component{
                                             value={this.state.fullname}   
                                             onChange= {this.handleuserNameChanged.bind(this)}         
                                         />
+                                        {this.validator.message('full name', this.state.fullname, 'required|alpha', {className: 'error-message'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -142,6 +156,7 @@ export default class SignUp extends React.Component{
                                             value={this.state.email}     
                                             onChange={this.handleuserEmailChanged.bind(this)}        
                                         />
+                                        {this.validator.message('email', this.state.email, 'required|email', {className: 'error-message'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -150,6 +165,7 @@ export default class SignUp extends React.Component{
                                             value={this.state.password}    
                                             onChange={this.handleuserPasswordChanged.bind(this)}                 
                                         />
+                                        {this.validator.message('password', this.state.password, 'required|min:5', {className: 'error-message'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -158,6 +174,7 @@ export default class SignUp extends React.Component{
                                             value={this.state.phone}
                                             onChange={this.handleUserPhone.bind(this)}           
                                         />
+                                        {this.validator.message('phone', this.state.phone, 'required|phone', {className: 'error-message'})}
                                     </div>
                                     <Subtitle
                                         text="By clicking the SignUp button below, you agree to

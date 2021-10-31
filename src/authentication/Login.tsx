@@ -65,10 +65,7 @@ export default class Login extends  React.Component{
     }
 
     setresponseStatusAndMessage(status: any, message: any){
-        this.setState({
-            responseMessage: message,
-            responseStatus: status
-        })
+        this.setState({responseMessage: message,responseStatus: status})
         this.showSpinner()
     }
 
@@ -147,7 +144,7 @@ export default class Login extends  React.Component{
                                             value={this.state.email}     
                                             onChange={this.handleuserEmailChanged.bind(this)}        
                                         />
-                                        {this.validator.message('email', this.state.email, 'required|email', {className: 'text-danger'})}
+                                        {this.validator.message('email', this.state.email, 'required|email', {className: 'error-message'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -156,7 +153,7 @@ export default class Login extends  React.Component{
                                             value={this.state.password}    
                                             onChange={this.handleuserPasswordChanged.bind(this)}                 
                                         />
-                                        {this.validator.message('email', this.state.password, 'required|min:20|max:120', {className: 'text-danger'})}
+                                        {this.validator.message('password', this.state.password, 'required|min:5', {className: 'error-message'})}
                                     </div>
                                     <ForgotPasswordText 
                                         onClick={this.showResetPassword.bind(this)}> 
