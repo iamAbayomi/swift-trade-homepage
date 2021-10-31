@@ -105,8 +105,8 @@ export default class Login extends  React.Component{
     render(){
         
             return(
-            <div className="modal-container" ref={this.modal}>
-                <div className="modal show-modal" >
+            <div className="modal-container" >
+                <div className="modal show-modal" ref={this.modal} >
                     <div className="modal-content">
                         <span className="close-button" onClick={this.toogleModal.bind(this)}>x</span>                                
                         <ClassContainer className="">
