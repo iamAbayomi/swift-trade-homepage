@@ -5,6 +5,10 @@ import './TopNav.css';
 import styled from 'styled-components'
 import SignUpButton from '../ui-components/buttons/SignUpButton';
 import Login from '../../authentication/Login';
+import LoginText from '../LoginText/LoginText';
+
+
+
 
 const menuItems =  [ { link: '/', name: 'Home'}, { link: '/about', name: 'About Us'}, { link: '/contact' , name: 'Contact Us'},{ link: '/#buysellsection' , name: 'Sell Bitcoin/GiftCard'}]
 
@@ -44,12 +48,8 @@ function TopNav(){
             </div>
             <div className="top-nav-action-section display-flex-withspace">
                 
-                    <LoginText 
-                        className="text-button login-button"
-                        onClick={login}
-                        >
-                        Login
-                    </LoginText>
+                <LoginText class="default-unused" />
+                    
                 
                 
                 {/* Created a component and pass the props as class */}
@@ -87,6 +87,3 @@ function TopNav(){
 export default TopNav;
 
 
-const LoginText = styled.p `
-    margin: 20px 60px 0px 20px !important;
-`
