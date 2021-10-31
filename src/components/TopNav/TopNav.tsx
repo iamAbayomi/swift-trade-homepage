@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import SignUpButton from '../ui-components/buttons/SignUpButton';
 import Login from '../../authentication/Login';
 import LoginText from '../LoginText/LoginText';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -40,9 +41,9 @@ function TopNav(){
             </a>
             <div className="top-nav-menu display-flex-withspace">
                 {menuItems.map((menu) =>
-                    <a href={menu.link} className="top-nav-menu-text text-link">
+                    <NavLink to={menu.link}  className="top-nav-menu-text text-link">
                         {menu.name}
-                    </a>
+                    </NavLink>
                     )
                 }                
             </div>

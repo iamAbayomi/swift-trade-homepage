@@ -20,7 +20,7 @@ function App() {
           <div className="main-section" >
             <Switch>
                 <Route exact path="/" component={Homepage} />
-                <Route exact path="/landingpagetwo" component={Homepage} />
+                {/* <Route exact path="/landingpagetwo" component={Homepage} /> */}
                 <Route path="/contact" component={ContactUs}/>
                 <Route path="/about" component={Aboutpage} />
                 <Route path="/modalforms" component={ModalWithCards} />

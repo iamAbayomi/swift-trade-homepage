@@ -72,6 +72,14 @@
 
 }
 
+.top-nav-menu-active {
+    text-decoration: underline;
+    -webkit-text-decoration-color: rgba(1, 0, 102, 1); /* Safari */  
+    text-decoration-color: rgba(1, 0, 102, 1);
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;   
+}
+
 /* Small Breakpoint */
 @media screen and (max-width: 576px){
     .search-bar, .username, .notifications-icon{
