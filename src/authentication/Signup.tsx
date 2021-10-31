@@ -147,7 +147,7 @@ export default class SignUp extends React.Component{
                                             value={this.state.fullname}   
                                             onChange= {this.handleuserNameChanged.bind(this)}         
                                         />
-                                        {this.validator.message('full name', this.state.fullname, 'required|alpha', {className: 'error-message'})}
+                                        {this.validator.message('full name', this.state.fullname, 'required|alpha_space', {className: 'error-message'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -209,7 +209,7 @@ export default class SignUp extends React.Component{
                                         color={"white"} 
                                         backgroundColor={"#010066"} 
                                         buttonText={"SignUp"}  
-                                        onClick={this.signUp.bind(this)}  
+                                        onClick={this.validateForm.bind(this)}  
                                         
                                     />
                                 

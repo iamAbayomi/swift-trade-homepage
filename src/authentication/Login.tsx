@@ -157,6 +157,7 @@ export default class Login extends  React.Component{
                                         {this.validator.message('password', this.state.password, 'required|min:5', {className: 'error-message'})}
                                     </div>
                                     <ForgotPasswordText 
+                                        className="pointer"
                                         onClick={this.showResetPassword.bind(this)}> 
                                         I forgot password 
                                     </ForgotPasswordText>
@@ -187,7 +188,7 @@ export default class Login extends  React.Component{
                                     onClick= {this.validateForm.bind(this)}
                                 />
 
-                                <p className="login-text">Don't have an account yet? <span className="login-click-text" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
+                                <p className="login-text">Don't have an account yet? <span className="login-click-text pointer" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
                                 
 
                             </ClassContainer>

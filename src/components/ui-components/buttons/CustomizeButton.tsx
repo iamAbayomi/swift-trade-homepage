@@ -14,7 +14,7 @@ const CustomizeButton: React.FC<Props> = (Props) => {
     
         return(
             <div>
-                <Button style={
+                <Button className="pointer" style={
                         {
                             width: `${Props.width}`,
                             height: `${Props.height}`,
