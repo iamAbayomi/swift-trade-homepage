@@ -69,7 +69,7 @@ function TopNav(){
                 }    
                 
                     
-                <LoginText class="mobile-menu-text text-link" />       
+                <LoginText class="mobile-menu-text text-link pointer" />       
             </div>
             <img className="menu-toggle" id="toggle-menu" 
                     src="/vectors/menu.svg"

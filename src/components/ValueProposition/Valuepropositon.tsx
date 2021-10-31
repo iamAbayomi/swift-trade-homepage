@@ -15,7 +15,7 @@ function Valueproposition(){
                         giftcard at the best rate, why not give us a trial.
                     </p>
                     
-                    <SignUpButton class="blue-button get-started" />
+                    <SignUpButton class="blue-button get-started pointer" />
                 </div>
                 <div className="value-proposition-icon">
                     <img className="value-proposition-icon" src="./vectors/vp-vector.svg" />

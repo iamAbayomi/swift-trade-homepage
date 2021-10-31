@@ -214,7 +214,7 @@ export default class SignUp extends React.Component{
                                     />
                                 
                                 <p className="login-text">Already a member? 
-                                        <span className="login-click-text"
+                                        <span className="login-click-text pointer"
                                             onClick={this.showLogIn.bind(this)}
                                         > Login</span></p>
                             </ClassContainer>
