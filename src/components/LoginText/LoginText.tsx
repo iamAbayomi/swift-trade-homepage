@@ -16,7 +16,7 @@ const LoginText : React.FC<props> = (props) => {
     return(
         <div>
             <Text 
-                className="text-button login-button"
+                className={props.class}
                 onClick={showLogin}
             >
                 Login
@@ -32,5 +32,5 @@ const LoginText : React.FC<props> = (props) => {
 export default LoginText 
 
 const Text = styled.p`
-    margin: 20px 60px 0px 20px !important;
+    
 `

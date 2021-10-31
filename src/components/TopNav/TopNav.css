@@ -29,6 +29,10 @@
 
 }
 
+.text-button-important{
+    margin: 20px 60px 0px 20px !important;
+}
+
 
 .menu-toggle{
     display: none;

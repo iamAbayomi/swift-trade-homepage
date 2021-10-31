@@ -126,7 +126,8 @@ export default class Login extends  React.Component{
             return(
             <div className="modal-container" >
                 <div className="modal show-modal" ref={this.modal} >
-                    <div className="modal-content">
+                    <div className="">
+                        <div className="modal-content">
                         <span className="close-button" onClick={this.toogleModal.bind(this)}>x</span>                                
                         <ClassContainer className="">
                                 <ModalHeading
@@ -190,6 +191,7 @@ export default class Login extends  React.Component{
                                 
 
                             </ClassContainer>
+                    </div>
                     </div>
                 </div>
                 

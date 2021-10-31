@@ -49,7 +49,7 @@ function TopNav(){
             </div>
             <div className="top-nav-action-section display-flex-withspace">
                 
-                <LoginText class="default-unused" />
+                <LoginText class="text-button login-button text-button-important" />
                     
                 
                 
@@ -67,12 +67,9 @@ function TopNav(){
                     </a>
                     )
                 }    
-                <a 
-                    className="mobile-menu-text text-link"
-                    onClick={login}
-                    >
-                    Login
-                </a>            
+                
+                    
+                <LoginText class="mobile-menu-text text-link" />       
             </div>
             <img className="menu-toggle" id="toggle-menu" 
                     src="/vectors/menu.svg"
