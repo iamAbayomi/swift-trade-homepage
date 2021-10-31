@@ -258,7 +258,7 @@ const SuccessMessageText = styled.p`
     line-height: 21px;
     text-align: center;
     /* Swift gray */
-    color: green;
+    color: green !important;
 `
 
 
