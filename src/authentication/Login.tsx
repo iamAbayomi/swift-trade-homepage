@@ -167,17 +167,16 @@ export default class Login extends  React.Component{
                                     :   <ErrorMessageText>{ this.state.responseMessage}</ErrorMessageText>
 
                                 }
-
-                                <LoaderContainer>
+                                {this.state.showSpinner ? <LoaderContainer>
                                     <Loader
-                                        type="ThreeDots"
-                                        color="rgb(1, 0, 102)"
-                                        height={50}
-                                        width={50}                                 
-                                        visible={this.state.showSpinner}
+                                        type="Oval"
+                                        color="green"
+                                        height={40}
+                                        width={40}                                 
+                                        // visible={this.state.showSpinner}
                                     // timeout={3000} //3 secs
                                     />
-                                </LoaderContainer>
+                                </LoaderContainer> :  
 
                                 <CustomizeButton
                                     width={"134px"} 
@@ -186,7 +185,7 @@ export default class Login extends  React.Component{
                                     backgroundColor={"#010066"} 
                                     buttonText={"Login"}   
                                     onClick= {this.validateForm.bind(this)}
-                                />
+                                />}
 
                                 <p className="login-text">Don't have an account yet? <span className="login-click-text pointer" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
                                 
@@ -247,7 +246,7 @@ const SuccessMessageText = styled.p`
     line-height: 21px;
     text-align: center;
     /* Swift gray */
-    color: green;
+    color: green !important;
 `
 
 
@@ -258,7 +257,7 @@ const ErrorMessageText = styled.p`
     line-height: 21px;
     text-align: center;
     /* Swift gray */
-    color: red;
+    color: red !important;
 `
 
 const LoaderContainer = styled.p`

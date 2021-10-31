@@ -192,17 +192,16 @@ export default class SignUp extends React.Component{
                                 </EditSection>
 
                                 
-                                <LoaderContainer>
+                                {this.state.showSpinner ? <LoaderContainer>
                                     <Loader
-                                        type="ThreeDots"
-                                        color="rgb(1, 0, 102)"
-                                        height={50}
-                                        width={50}                                   
-                                        visible={this.state.showSpinner}
+                                        type="Oval"
+                                        color="green"
+                                        height={40}
+                                        width={40}                                 
+                                        // visible={this.state.showSpinner}
                                     // timeout={3000} //3 secs
                                     />
-                                </LoaderContainer>
-
+                                </LoaderContainer> :  
                                     <CustomizeButton
                                         width={"134px"} 
                                         height={"44px"} 
@@ -212,6 +211,7 @@ export default class SignUp extends React.Component{
                                         onClick={this.validateForm.bind(this)}  
                                         
                                     />
+                                }
                                 
                                 <p className="login-text">Already a member? 
                                         <span className="login-click-text pointer"
@@ -269,7 +269,7 @@ const ErrorMessageText = styled.p`
     line-height: 21px;
     text-align: center;
     /* Swift gray */
-    color: red;
+    color: red !important;;
 `
 
 
