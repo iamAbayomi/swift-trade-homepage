@@ -13,6 +13,7 @@ import ModalCards from "../components/ModalForm/ModalCards"
 import { response } from "../classes/ModalData"
 
 import {withRouter} from 'react-router-dom'
+import Loader from "react-loader-spinner"
 
 
 // export const Component = withRouter(({history, location}) => {
@@ -37,7 +38,9 @@ export default class Login extends  React.Component{
         signUp: false,
         resetPassword: false,
         responseMessage: '',
-        responseStatus: 0
+        responseStatus: 0,
+        showSpinner: false
+        
     }
 
 
@@ -70,7 +73,12 @@ export default class Login extends  React.Component{
         console.log(modal)
     }
 
+    showSpinner(){
+     this.setState({showSpinner : !this.state.showSpinner})   
+    }
+
     login(){
+        this.showSpinner()
         
         axios.post('https://swift-trade-v1.herokuapp.com/api/v1/auth/login', {
             email: this.state.email,
@@ -82,10 +90,12 @@ export default class Login extends  React.Component{
             window.location.href = `https://swift-user-dashboard.netlify.app/token/${res.data.data}`
             console.log(res.status)
             this.setresponseStatusAndMessage(res.status ,res.data.message)
+            this.showSpinner()
         })
         .catch((err)=>{
             console.log(err)
             this.setresponseStatusAndMessage("err", err.message)
+            this.showSpinner()
         })
         console.log(this.state.email)
     }
@@ -143,8 +153,16 @@ export default class Login extends  React.Component{
 
                                 }
 
-                                
-
+                                <LoaderContainer>
+                                    <Loader
+                                        type="ThreeDots"
+                                        color="rgb(1, 0, 102)"
+                                        height={50}
+                                        width={50}                                 
+                                        visible={this.state.showSpinner}
+                                    // timeout={3000} //3 secs
+                                    />
+                                </LoaderContainer>
 
                                 <CustomizeButton
                                     width={"134px"} 
@@ -225,4 +243,9 @@ const ErrorMessageText = styled.p`
     text-align: center;
     /* Swift gray */
     color: red;
+`
+
+const LoaderContainer = styled.p`
+    max-width: 50px;
+    margin: auto;
 `
