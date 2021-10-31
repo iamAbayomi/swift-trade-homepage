@@ -1,5 +1,6 @@
 import axios from "axios"
 import React from "react"
+import Loader from "react-loader-spinner"
 import styled from "styled-components"
 import { response } from "../classes/ModalData"
 import ModalCards from "../components/ModalForm/ModalCards"
@@ -27,7 +28,8 @@ export default class SignUp extends React.Component{
         loginIn: false,
         confimPassword: false,
         responseMessage: '',
-        responseStatus: 0
+        responseStatus: 0,
+        showSpinner: false
     }
 
     showLogIn(){
@@ -60,8 +62,15 @@ export default class SignUp extends React.Component{
         console.log(modal)
     }
 
+    showSpinner(){
+        this.setState({showSpinner : !this.state.showSpinner})   
+       }
+   
+
     signUp(){
         console.log("this is the user fullname "+this.state.fullname)
+
+        this.showSpinner()
 
         axios.post('https://swift-trade-v1.herokuapp.com/api/v1/auth/register', 
                 {
@@ -73,11 +82,13 @@ export default class SignUp extends React.Component{
                 })
                 .then((res: any) => {
                     console.log('This is the data', res.data)
-                    this.setresponseStatusAndMessage(res.status ,res.data.message)
-                    this.showLogIn()
-                })
+                    this.setresponseStatusAndMessage(res.status ,res.data.message + '\n Redirecting you to login page to complete login')
+                    this.showSpinner()
+                    setTimeout(() =>{ this.showLogIn()}, 3000)})
                 .catch((err) => {
                     console.log(err)
+                    this.setresponseStatusAndMessage("err", err.message)
+                    this.showSpinner()
                 })
     }
 
@@ -160,10 +171,21 @@ export default class SignUp extends React.Component{
                                     :   <ErrorMessageText>{ this.state.responseMessage}</ErrorMessageText>
 
                                 }
-
-                                
                                     
                                 </EditSection>
+
+                                
+                                <LoaderContainer>
+                                    <Loader
+                                        type="ThreeDots"
+                                        color="rgb(1, 0, 102)"
+                                        height={50}
+                                        width={50}                                   
+                                        visible={this.state.showSpinner}
+                                    // timeout={3000} //3 secs
+                                    />
+                                </LoaderContainer>
+
                                     <CustomizeButton
                                         width={"134px"} 
                                         height={"44px"} 
@@ -231,4 +253,10 @@ const ErrorMessageText = styled.p`
     text-align: center;
     /* Swift gray */
     color: red;
+`
+
+
+const LoaderContainer = styled.p`
+    max-width: 50px;
+    margin: auto;
 `
