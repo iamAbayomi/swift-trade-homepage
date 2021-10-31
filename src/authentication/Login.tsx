@@ -15,6 +15,8 @@ import { response } from "../classes/ModalData"
 import {withRouter} from 'react-router-dom'
 import Loader from "react-loader-spinner"
 
+import SimpleReactValidator from "simple-react-validator"
+
 
 // export const Component = withRouter(({history, location}) => {
 
@@ -25,10 +27,11 @@ export default class Login extends  React.Component{
     
     modal: React.RefObject<HTMLDivElement>
     history: any
+    validator: SimpleReactValidator
     constructor(props: any){
         super(props)
         this.modal = React.createRef()       
-        
+        this.validator = new SimpleReactValidator()
     }
 
 
@@ -43,6 +46,9 @@ export default class Login extends  React.Component{
         
     }
 
+    componentWillUnmount(){
+        
+    }
 
     showSignUp(){
         this.setState({
@@ -63,6 +69,7 @@ export default class Login extends  React.Component{
             responseMessage: message,
             responseStatus: status
         })
+        this.showSpinner()
     }
 
     toogleModal(){
@@ -77,6 +84,15 @@ export default class Login extends  React.Component{
      this.setState({showSpinner : !this.state.showSpinner})   
     }
 
+    validateForm(){
+        if(this.validator.allValid()){
+            this.login()
+        }else{
+            this.validator.showMessages()
+            this.forceUpdate()
+        }
+    }
+
     login(){
         this.showSpinner()
         
@@ -86,16 +102,14 @@ export default class Login extends  React.Component{
         })
         .then((res: any) => {
             console.log('This is the data', res)
-            // window.location.replace('https://swift-user-dashboard.netlify.app/') 
             window.location.href = `https://swift-user-dashboard.netlify.app/token/${res.data.data}`
             console.log(res.status)
             this.setresponseStatusAndMessage(res.status ,res.data.message)
-            this.showSpinner()
+            
         })
         .catch((err)=>{
             console.log(err)
             this.setresponseStatusAndMessage("err", err.message)
-            this.showSpinner()
         })
         console.log(this.state.email)
     }
@@ -126,13 +140,14 @@ export default class Login extends  React.Component{
                                     weight="500"
                                 />
                                 <EditSection>
-                                <div>
+                                    <div>
                                         <InputField 
                                             type={"Email"} 
                                             placeholder={"Email"}   
                                             value={this.state.email}     
                                             onChange={this.handleuserEmailChanged.bind(this)}        
                                         />
+                                        {this.validator.message('email', this.state.email, 'required|email', {className: 'text-danger'})}
                                     </div>
                                     <div>
                                         <InputField 
@@ -141,6 +156,7 @@ export default class Login extends  React.Component{
                                             value={this.state.password}    
                                             onChange={this.handleuserPasswordChanged.bind(this)}                 
                                         />
+                                        {this.validator.message('email', this.state.password, 'required|min:20|max:120', {className: 'text-danger'})}
                                     </div>
                                     <ForgotPasswordText 
                                         onClick={this.showResetPassword.bind(this)}> 
@@ -170,7 +186,7 @@ export default class Login extends  React.Component{
                                     color={"white"} 
                                     backgroundColor={"#010066"} 
                                     buttonText={"Login"}   
-                                    onClick= {this.login.bind(this)}
+                                    onClick= {this.validateForm.bind(this)}
                                 />
 
                                 <p className="login-text">Don't have an account yet? <span className="login-click-text" onClick={this.showSignUp.bind(this)}> Sign Up</span></p>
