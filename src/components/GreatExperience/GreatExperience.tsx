@@ -19,7 +19,7 @@ function GreatExperience(){
                         exchange digital and fiat assets safely. 
                         Owned and managed by Swift trade NG established and Incoperated in Nigeria.
                     </p>
-                    <SignUpButton class="blue-button" />
+                    <SignUpButton class="blue-button pointer" />
                 </FirstSection>
                 <div className="second-section">
                     <Image className="great-experience-image" src="./vectors/application-display.svg" />

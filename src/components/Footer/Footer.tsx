@@ -21,8 +21,8 @@ function Footer(){
                     Fusce ut elit aliquet, fermentum leo vel, tempus nunc. 
                     Fusce eu rhoncus augue. Fusce vel metus pharetra, fermentum
                     </p>
-                    <div className="social-media-handles">
-                        <img src="./vectors/social-media-handles.svg" />
+                    <div className="social-media-handles pointer">
+                        <img src="./vectors/social-media-handles.svg " />
                     </div>
                 </div>
                 <p className="footer-copyright">@ 2022 Swift Trade NG</p>
@@ -33,7 +33,7 @@ function Footer(){
                     <p className="footer-header"> Company Links</p>
                     {companyLinks.map((item) =>
 
-                        <a href={item.link} className="footer-highlight" >{item.name}</a>
+                        <a href={item.link} className="footer-highlight pointer" >{item.name}</a>
                     )}
                 </div>
 
@@ -41,7 +41,7 @@ function Footer(){
                 <div className="company-us">
                     <p className="footer-header">Contact Us</p>
                     {contactUs.map((item)  =>
-                     <p className="footer-highlight" >{item}</p>
+                     <p className="footer-highlight pointer" >{item}</p>
                     )}
                 </div>
             </div>
@@ -51,7 +51,7 @@ function Footer(){
                     <div className="instagram-section">
                         {
                             imagesBackground.map((item) => 
-                                <img className="ig-image" src={`./vectors/${item}.svg`}/>
+                                <img className="ig-image pointer" src={`./vectors/${item}.svg`}/>
                             )
                         }
                         

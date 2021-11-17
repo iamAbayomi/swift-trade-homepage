@@ -49,12 +49,12 @@ function TopNav(){
             </div>
             <div className="top-nav-action-section display-flex-withspace">
                 
-                <LoginText class="text-button login-button text-button-important" />
+                <LoginText class="text-button login-button text-button-important pointer" />
                     
                 
                 
                 {/* Created a component and pass the props as class */}
-                <SignUpButton class="blue-button top-nav-button" />
+                <SignUpButton class="blue-button top-nav-button pointer" />
             </div>
             <div className={`mobile-menu ${isActive ? "is-open" : "" }`}>
                 <img className="close-icon" 
