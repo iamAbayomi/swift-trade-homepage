@@ -63,8 +63,8 @@ export default class Homepage extends React.Component{
                         <OrangeBar />
                         <p className="buysell-text" >Discover exclusive deals and discounts with our mobile experience</p>
                         <div className="play-storeapp  display-flex">
-                            <img src="./vectors/app-store-logo.png" />
-                            <img src="./vectors/google-play.png" />
+                            <img className="pointer" src="./vectors/app-store-logo.png" />
+                            <img className="pointer" src="./vectors/google-play.png" />
                         </div>
                         <div className="iphone-store-container display-flex">
                             <img className="image-store-img" src="./vectors/iphonex1.png" />

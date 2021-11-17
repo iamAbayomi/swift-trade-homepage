@@ -33,7 +33,7 @@ function BuySellSectionTwo(){
                     </BuySellCardView>
                 </div>
                 <div className="buysell-button">
-                <SignUpButton class="blue-button" />
+                <SignUpButton class="blue-button pointer" />
                 </div>
             </div>
         </div>
