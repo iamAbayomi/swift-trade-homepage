@@ -125,7 +125,9 @@
     color: green;
 }
 
-.pointer {cursor: pointer;}
+.pointer {
+    cursor: pointer;
+}
 
 /* Small Breakpoint */
 @media screen and (max-width: 576px){
