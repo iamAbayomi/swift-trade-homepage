@@ -106,7 +106,7 @@ export default class Login extends  React.Component{
         })
         .catch((err)=>{
             console.log(err)
-            this.setresponseStatusAndMessage("err", err.message)
+            this.setresponseStatusAndMessage("err", err.response.data.message)
         })
         console.log(this.state.email)
     }
@@ -245,7 +245,6 @@ const SuccessMessageText = styled.p`
     font-size: 12px;
     line-height: 21px;
     text-align: center;
-    /* Swift gray */
     color: green !important;
 `
 
@@ -256,7 +255,6 @@ const ErrorMessageText = styled.p`
     font-size: 12px;
     line-height: 21px;
     text-align: center;
-    /* Swift gray */
     color: red !important;
 `
 

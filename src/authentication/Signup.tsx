@@ -100,7 +100,7 @@ export default class SignUp extends React.Component{
                     setTimeout(() =>{ this.showLogIn()}, 3000)})
                 .catch((err) => {
                     console.log(err)
-                    this.setresponseStatusAndMessage("err", err.message)
+                    this.setresponseStatusAndMessage("err", err.response.data.message)
                     this.showSpinner()
                 })
     }
