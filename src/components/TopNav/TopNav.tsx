@@ -24,7 +24,6 @@ function TopNav(){
     }
 
     function closeDashbaord(){
-        // setOpen(!isOpen)
         setisActive(!isActive)   
     }
 
