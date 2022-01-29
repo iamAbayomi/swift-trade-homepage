@@ -26,7 +26,7 @@
 .value-proposition-icon{
     margin: 50px auto 0px auto;
     overflow-x: hidden;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     width: 100%;
 }
 
