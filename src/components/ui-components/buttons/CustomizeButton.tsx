@@ -6,7 +6,8 @@ type Props ={
     color: string,
     backgroundColor: string
     buttonText: string,
-    onClick? : MouseEventHandler<HTMLButtonElement>
+    onClick? : MouseEventHandler<HTMLButtonElement>,
+    margin? : string
 }
 
 // This component aims to determine the reusable component
@@ -19,7 +20,8 @@ const CustomizeButton: React.FC<Props> = (Props) => {
                             width: `${Props.width}`,
                             height: `${Props.height}`,
                             color: `${Props.color}`,
-                            backgroundColor: `${Props.backgroundColor}`
+                            backgroundColor: `${Props.backgroundColor}`,
+                            margin : `${Props.margin}`
                         }
                 }
                 onClick={Props.onClick}
