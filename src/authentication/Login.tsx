@@ -16,6 +16,8 @@ import {withRouter} from 'react-router-dom'
 import Loader from "react-loader-spinner"
 
 import SimpleReactValidator from "simple-react-validator"
+import ModalComponent from "../components/Modal/ModalComponent"
+import ForgotPassword from "./ForgotPassword"
 
 
 // export const Component = withRouter(({history, location}) => {
@@ -120,6 +122,9 @@ export default class Login extends  React.Component{
         this.setState({password:  event.target.value})
     }
 
+    forgotPassword(){
+        return <ForgotPassword />
+    }
 
     render(){
         
@@ -200,7 +205,7 @@ export default class Login extends  React.Component{
                 }
 
                 {
-                    this.state.resetPassword ? <ModalCards response={response[1].resetPassword}/> : <div style={{display: `none`}}/>
+                    this.state.resetPassword ? <ModalComponent modalContent={ this.forgotPassword()} /> : <div style={{display: `none`}}/>
                                     
                 } 
             </div>
