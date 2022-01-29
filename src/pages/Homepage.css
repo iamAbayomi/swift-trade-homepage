@@ -85,6 +85,14 @@
     width: 100%;
 }
 
+.light-heading{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left-align;
+    color: #828282;
+}
 
 @media screen and (max-width: 576px ) {
     .buysell-content{
