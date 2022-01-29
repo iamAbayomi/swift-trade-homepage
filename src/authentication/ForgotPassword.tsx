@@ -51,7 +51,7 @@ function ForgotPassword(){
                 color={"white"} 
                 backgroundColor={"#010066"} 
                 buttonText={"Send"}
-                margin="20px auto 10px auto"
+                margin="40px auto 10px auto"
                 onClick={sendResetLink}
             />
             
