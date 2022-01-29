@@ -6,6 +6,10 @@ type Props ={
     placeholder: string,
     value?: string,
     onChange?: ChangeEventHandler<HTMLInputElement>
+    onBlur? : any,
+    width? : string,
+    height? : string
+
 }
 
 
@@ -17,6 +21,13 @@ const InputField: React.FC<Props> = (Props) => {
                 placeholder={Props.placeholder}
                 value={Props.value}
                 onChange={Props.onChange}
+                onBlur={Props.onBlur}
+                style={
+                    {
+                        width: `${Props.width}`,
+                        height: `${Props.height}`,
+                    }
+            }
             />
         </div>
     )
