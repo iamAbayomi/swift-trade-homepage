@@ -47,7 +47,7 @@ export default BuySellSectionTwo
 
 const BlueVector = styled.img `
     margin: 20px auto 0px auto;
-    max-width: 1400px;
+    // max-width: 1400px;
     width: 100%;
 `
 
