@@ -6,11 +6,11 @@ import InputField from "../components/ui-components/InputField"
 function ForgotPassword(){
     return(
         <Contents>
-            <p className="light-heading">Please enter your email address to reset your password</p>
+            <HeadingText className="light-heading">Please enter your email address to reset your password</HeadingText>
             <InputField 
                 type={"email"} 
                 placeholder={"Email"}              
-                value={""}
+                // value={""}
                 onChange={()=> {}}
             />
             <CustomizeButton 
@@ -29,4 +29,8 @@ export default ForgotPassword
 
 const Contents = styled.div`
     margin: 20px 20px;
+`
+const HeadingText = styled.p`
+    margin: 20px 0px 40px 0px;
+    text-align: left;
 `
