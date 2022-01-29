@@ -2,9 +2,10 @@
     /* background-image: url("./vectors/testimonial-icon.jpg"); */
     /* background: #010066; */
     width: 100%;
-    height: 1200px;
+    height: 1600px;
     background-position: center;
     background-repeat: no-repeat no-repeat;
+    background-size: cover;
     position: relative;
 }
 
