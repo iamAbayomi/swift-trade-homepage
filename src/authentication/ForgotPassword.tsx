@@ -2,8 +2,11 @@ import { ChangeEvent, useRef, useState } from "react"
 import SimpleReactValidator from "simple-react-validator"
 import styled from "styled-components"
 import { sendCustomAxios } from "../classes/Utilities"
+import ModalComponent from "../components/Modal/ModalComponent"
 import CustomizeButton from "../components/ui-components/buttons/CustomizeButton"
 import InputField from "../components/ui-components/InputField"
+import ResetPassword from "./ResetPassword"
+
 
 
 function ForgotPassword(){
@@ -20,13 +23,14 @@ function ForgotPassword(){
         if(simpleValidator.current.allValid()){
             const {response, error} = await sendCustomAxios('POST', 'user/password/forgot', body)
             setResponse(response)
-            console.log('response',response, error)
+            console.log('response', response, 'error', error)
         }
-        else{
-            simpleValidator.current.showMessages()
-        }
+        else{ simpleValidator.current.showMessages()}
     }
 
+    function showResetPassword(){
+        return <ResetPassword/>
+    }
 
     return(
         <Contents>
@@ -54,7 +58,9 @@ function ForgotPassword(){
                 margin="40px auto 10px auto"
                 onClick={sendResetLink}
             />
-            
+            {
+                response ? <ModalComponent modalContent={showResetPassword()} /> : <div style={{display: `none`}}/>                        
+            } 
             
         </Contents>
     )
@@ -64,7 +70,7 @@ export default ForgotPassword
 
 const Contents = styled.div`
     margin: 20px 10px;
-    height: 180px;
+    height: auto;
     width: 240px;
     box-sizing: border-box;
     
