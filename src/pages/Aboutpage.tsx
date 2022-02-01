@@ -6,6 +6,7 @@ import CEOTestimonial from "../components/CEOTestimonial/CEOTestimonial";
 import MeetTheTeam from "../components/MeetTheTeam/MeetTheTeam";
 
 import './AboutPage.css'
+import './Homepage.css'
 
 import TopNav from "../components/TopNav/TopNav";
 import Footer from "../components/Footer/Footer";
@@ -13,7 +14,7 @@ import OurHistory from "../components/OurHistory/OurHistory";
 function Aboutpage(){
     return(
         <div>
-            <div className="contents">
+            <div className="dashboard-contents">
                 <TopNav />
                 <AboutPageValueProposition />
                <div className="page-body">
