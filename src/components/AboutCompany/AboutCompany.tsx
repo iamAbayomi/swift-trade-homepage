@@ -12,8 +12,11 @@ function AboutCompany(){
                 <div className="about-company-text">
                     <p className="about-company-title">About Company</p>
                     <OrangeBar/>
-                    <p className="about-company-subtitle">Company is an online site and a p2admin platform that allows users to buy, sell and/ or exchange digital and fiat assets safely. 
-                    Owned and managed by CoinBase Business Services established and Incoperated in Nigeria. </p>
+                    <p className="about-company-subtitle">
+                        Swift Trades Global Concept is a cryptocurrency trading platform based in Lagos, Nigeria. 
+                      Cryptocurrency trade and other financial services related to cryptocurrency are made easy with us for everyone. 
+                      We also provide investment advisory and safe investment schemes which allows investors to become life-long partners. Investment schemes comes with 1% - 4% monthly return.
+                      </p>
                 </div>
                 <div className="about-company-logo">
                     <img className="about-company-logo"  src="./vectors/qualities.png" />
